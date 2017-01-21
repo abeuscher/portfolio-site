@@ -1,0 +1,182 @@
+{
+    "meta": {
+        "title": "Alex Beuscher : Resume and Portfolio",
+        "author": "Alex Beuscher",
+        "description": "Alex Beuscher is a web developer living in Alameda, CA. He has most recently worked at 2K Games in Novato, CA and is seeking new employment opportunities.",
+        "keywords": "front end developer, web development alameda"
+    },
+    "header": {
+        "name": "Alex Beuscher",
+        "site_title": "Resume and Portfolio",
+        "nav": [{
+            "text": "",
+            "class": "icon-github",
+            "url": "#"
+        }, {
+            "text": "",
+            "class": "icon-linkedin",
+            "url": "https://www.linkedin.com/in/alex-beuscher-8314157/"
+        }],
+        "contact":[{
+            "text":"617.359.6971 c",
+            "url":"tel:6173596971"
+          },{
+              "text":"alexbeuscher@gmail.com",
+              "url":"mailto:alexbeuscher@gmail.com"
+            }
+        ]
+    },
+    "footer": {
+        "legal": "© Alex Beuscher 2017. All Rights Reserved, more or less."
+    },
+    "sections": [{
+        "title": "portfolio",
+        "intro": "I am a web developer living in Alameda, California. I most recently worked at 2K Games as a Senior Web Developer and am currently seeking employment in a development or managerial role. I have eighteen years of experience working on the web, and have worked in organizations of all sizes. My recent focus has been in front end work with a focus on localization and security.",
+        "sites": [{
+            "title": "XCOM",
+            "thumb": "thm-xcom-desktop.jpg",
+            "description": "Description (mention tellemetry)",
+            "url": "https://www.xcom.com"
+        }, {
+            "title": "WWE 2K",
+            "thumb": "thm-wwe-desktop.jpg",
+            "description": "",
+            "url": "https://wwe.2k.com/"
+        }, {
+            "title": "WWE 2K Logo Uploader",
+            "thumb": "thm-uploader-desktop.jpg",
+            "description": "",
+            "url": "https://wwe.2k.com/wwe2k17logo/"
+        }, {
+            "title": "Borderlands",
+            "thumb": "thm-borderlands-desktop.jpg",
+            "description": "",
+            "url": "https://www.borderlandsthegame.com/"
+        }, {
+            "title": "Hangar 13 Games",
+            "thumb": "thm-hangar13-desktop.jpg",
+            "description": "",
+            "url": "https://hangar13games.com/"
+        }, {
+            "title": "2K Support",
+            "thumb": "thm-support-desktop.jpg",
+            "description": "Zendesk theming",
+            "url": "http://support.2k.com"
+        }, {
+            "title": "MCO Productions",
+            "thumb": "thm-mco-desktop.jpg",
+            "description": "",
+            "url": "http://mcoproductions.com"
+        }, {
+            "title": "DJ Michael",
+            "thumb": "thm-djm-desktop.jpg",
+            "description": "",
+            "url": "http://djmichael.com"
+        }]
+    }, {
+        "title": "resume",
+        "intro": "",
+        "pdf_link": "",
+        "jobs": [{
+            "name": "2K Games",
+            "description": "2K Games is a video game publisher for titles such as Civilization, WWE 2K, NBA 2K, and Borderlands.",
+            "location": "Novato, CA",
+            "url": "www.2k.com",
+            "positions": [{
+                "time_span": "2016 - 2017",
+                "title": "Senior Web Developer",
+                "description": "After growing our team I was promoted to a senior position, indicating a greater level of control over our projects and upward feeedback regarding layouts, user experience, and management of the development team."
+            }, {
+                "time_span": "2013 - 2016",
+                "title": "Web Developer",
+                "description": "When I was hired, the company was largely outsourcing their web work and did not have an in house developer. Over the course of my time at 2K, the web department matured significantly, modernizing our processes and greatly improving efficiency within the company. Initial challenges included managing a disparate group of third party sites using different technologies and with varying depencies and levels of complication. Most sites were localized to between 6 and 9 languages, presenting another interesting set of challenges. Over the course of my time at 2K, we centralized our data inputs to a single CMS. In its second incarnation, the CMS is accessed via API to a set of statically built sites under continuous deploy."
+            }]
+        }, {
+            "name": "Medley Health",
+            "description": "Medley was a startup company in the medical industry, who provided membership model practice management services for primary care physicians. The company is now defunct.",
+            "location": "Dublin, CA",
+            "url": "www.medleyhealth.com",
+            "positions": [{
+                "time_span": "2011 - 2012",
+                "title": "Web Content Manager / Developer",
+                "description": "I ran their public websites, managed content, and provided other web related support and development."
+            }]
+        }, {
+            "name": "WAAF and Mike FM (Entercom)",
+            "description": "WAAF and Mike FM are/were two Boston music radio stations owned by Entercom. WAAF remains a top rated station, while Mike FM has since gone off-air.",
+            "location": "Brighton, MA",
+            "url": "www.waaf.com",
+            "positions": [{
+                "time_span": "2008 - 2011",
+                "title": "Online Content Director",
+                "description": "I managed a team of content producers, and also worked in a variety of roles to support and create video, web, and mobile content for our listeners in conjunction with our station's on-air personalities as well as local and national celebrities."
+            }]
+        }, {
+            "name": "Boston Interactive",
+            "description": "Boston Interactive is a leading design firm.",
+            "location": "Charlestown, MA",
+            "url": "www.bostoninteractive.com",
+            "positions": [{
+                "time_span": "2007 - 2008",
+                "title": "Web Developer",
+                "description": "My duties as a developer there ranged from markup and CSS layout to some php programming projects and a good deal of javascript work. Among the clients serviced were FAO Schwartz, New England Coffee, MedAssets, and many others."
+            }]
+        }, {
+            "name": "Nurse-Recruiter.com",
+            "description": "Nurse-Recruiter is an online job portal for nurses, similar to Monster.com but specialized.",
+            "location": "Wellesley, MA",
+            "url": "www.nurse-recruiter.com",
+            "positions": [{
+                "time_span": "2006 - 2007",
+                "title": "Lead Web Developer",
+                "description": "My duties included the design and implementation of an intranet, and redevelopment of web software from PERL into PHP. I also rewrote most of the content on the site for SEO value as well as style, and increased total web visitors as well as goal conversions by over 100% in 10 months."
+            }]
+        }, {
+            "name": "MCO Productions",
+            "description": "",
+            "location": "Brighton, MA",
+            "url": "www.mcoproductions.com",
+            "positions": [{
+                "time_span": "2001 - 2011",
+                "title": "Trivia DJ",
+                "description": "I have run pub trivia on and off for years, and have experience in DJ'ing and MC'ing functions such as weddings, special events, and parties. I have a full PA system and contract independently. "
+            }]
+        }, {
+            "name": "Freelance Web Design",
+            "description": "",
+            "location": "Allston, MA / Alameda, CA",
+            "url": "",
+            "positions": [{
+                "time_span": "1998 - present",
+                "title": "Self Employed",
+                "description": "I employ myself on and off as a freelance developer and designer. Along with my web work, I do consulting in basic IT, application training, and print design."
+            }]
+        }, {
+            "name": "SSDS",
+            "description": "Solomon Schechter Day School is a private elementary school.",
+            "location": "",
+            "url": "www.ssdsboston.org",
+            "positions": [{
+                "time_span": "2001 - 2003",
+                "title": "Afterschool Instructor",
+                "description": "Taught video and web design to children ages 9 to 12 at After School Program. For video, students learned to work with a camera, plan movies, and make short films. In web we learned to make a basic site using a text editor and graphics tools."
+            }]
+        }, {
+            "name": "AMICAS, Inc.",
+            "description": "AMICAS provides software for the management and viewing of medical images (x-rays) inside of a web browser on standard PC's.",
+            "location": "Brighton, MA / Chicago, IL",
+            "url": "",
+            "positions": [{
+                "time_span": "1997 - 2000",
+                "title": "Webmaster",
+                "description": "My responsibilities included redesign and implementation of public website as well as the design of an Intranet Site."
+            }]
+        }],
+        "education": [{}, {}],
+        "skills": {
+            "Languages": ["PHP", "SQL", "HTML", "CSS", "Javascript", "jQuery", "ASP", "Angular"],
+            "Web Apps and Tools": ["Expression Engine", "Wordpress", "Drupal", "Git", "Cockpit CMS", "vBulletin", "ZenDesk", "More (please ask if you don't see what you're looking for)"],
+            "Miscellaneous": ["Video Production (scheduling, casting, location production, live shoots, editing, publishing)", "Audio Work (voice acting, production)", "DJ (Master of Ceremonies, Event Programming, Music Programming, Pub Trivia)", "Teacher (Elementary through Middle School - uncertified)", "Drums (intermediate)", "Writing (copy-editing, writing for web, creative, business,technical writing and documentation)"]
+        }
+    }]
+}

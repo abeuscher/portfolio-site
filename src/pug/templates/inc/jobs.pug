@@ -1,0 +1,17 @@
+.jobs.grid
+  each job in locals.sections[1].jobs
+    .row
+      .col-12-s
+        h4=job.name
+          span.loc=", " + job.location
+          span.url
+            a(href=job.url)=job.url
+        .job_meta
+          p=job.description
+    each position in job.positions
+      .row.position
+        .col-2-s
+          p.timespan=position.time_span
+        .col-10-s
+          h4=position.title
+          p=position.description

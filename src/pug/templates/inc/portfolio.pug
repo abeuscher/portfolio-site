@@ -1,0 +1,7 @@
+.portfolio.grid
+  .row.pad
+    each site in locals.sections[0].sites
+      .col-3-m.col-6-xs
+        if site.thumb!=""
+          .thumb(data-bg="/img/" + site.thumb, data-info=JSON.stringify(site))
+            h3=site.title

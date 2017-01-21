@@ -1,0 +1,506 @@
+@import "bootstrap";
+
+@mixin spinner($size: 30px, $thickness: 5px, $speed: 0.75s, $color: gray, $empty-color: transparent) {
+	width: $size;
+	height: $size;
+	box-sizing: border-box;
+	border: $thickness solid $color;
+	border-top-color: $empty-color;
+
+	border-radius: 50%;
+	animation: spin linear $speed infinite;
+
+	@keyframes spin {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
+}
+@mixin chevron($direction: "left", $size: 30px, $height: 60px, $color: white, $hover-color: $color, $angle: 45deg, $thickness: 5px, $transition-duration: 0.25s, $skew: 0deg) {
+	width: $size;
+	height: $size * 2;
+	position: absolute;
+	&:hover {
+		&:before, &:after {
+			background-color: $hover-color;
+		}
+	}
+	&:before {
+		@if $direction == "left" {
+			transform: rotate(-$angle) skewY($skew);
+			transform-origin: right top;
+			border-top-left-radius: $thickness / 2;
+			border-bottom-right-radius: $thickness / 2;
+		} @else {
+			transform: rotate($angle) skewY($skew);
+			transform-origin: left top;
+			border-top-right-radius: $thickness / 2;
+			border-bottom-left-radius: $thickness / 2;
+		}
+		// border-top-left-radius: $thickness / 2;
+
+		top: 50%;
+	}
+	&:after {
+		@if $direction == "left" {
+			transform: rotate($angle) skewY(-$skew);
+			transform-origin: right bottom;
+			border-bottom-left-radius: $thickness / 2;
+			border-top-right-radius: $thickness / 2;
+		} @else {
+			transform: rotate(-$angle) skewY(-$skew);
+			transform-origin: left bottom;
+			border-bottom-right-radius: $thickness / 2;
+			border-top-left-radius: $thickness / 2;
+		}
+		// border-bottom-left-radius: $thickness / 2;
+
+
+		bottom: 50%;
+	}
+	&:before, &:after {
+		content: "";
+		#{$direction}: 0;
+		width: $thickness;
+		height: 50%;
+		display: block;
+		position: absolute;
+		background-color: $color;
+		transition: background-color $transition-duration;
+	}
+};
+@mixin bp($bp, $clamp: false, $prop: "min-width") {
+	$queries: ();
+	@each $bp-name, $bp-value in $global-bps {
+		$map-2: (#{$bp-name}: $bp-value);
+		$queries: map-merge($queries, $map-2);
+	}
+
+	$mq-cutoff: 5;
+
+	@if $mq-support {
+		$bp-width: map-get($queries, $bp);
+		$keys: map-keys($queries);
+		$bp-index: index($keys, $bp);
+		$next-bp: if(length($keys) > $bp-index, nth($keys, $bp-index + 1), null);
+		$prev-bp: if($bp-index > 1, nth($keys, $bp-index - 1), null);
+
+		@if $clamp and $prop == "min-width" and $next-bp {
+			@media only screen
+				and (min-width: #{$bp-width})
+				and (max-width: #{map-get($queries, $next-bp)})
+				{ @content; }
+		} @else if $clamp and $prop == "max-width" and $prev-bp {
+			@media only screen
+				and (max-width: #{$bp-width})
+				and (min-width: #{map-get($queries, $prev-bp)})
+				{ @content; }
+		} @else {
+			@media only screen and (#{$prop}: #{$bp-width}) { @content; }
+		}
+	} @else {
+		@if index(map-keys($queries), $bp) >= $mq-cutoff {
+			@content;
+		}
+	}
+}
+
+@mixin aspect-ratio($width, $height) {
+	position: relative;
+	&:after {
+		content: "";
+		display: block;
+		padding-top: $height / $width * 100%;
+	}
+
+	& > * {
+		display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+	}
+}
+
+@mixin button(
+	$bg-color: white,
+	$color: black,
+	$font-size: 1em,
+	$padding: 5px 20px,
+	$border-radius: 5px,
+	$margin: 0,
+	$border-width: 1px,
+	$border-color: $color,
+	$hover-color: $color,
+	$border-style: solid,
+	$hover-bg-color: $bg-color,
+	$hover-border-color: $hover-color,
+	$transition-duration: 0.25s
+	) {
+	transition-duration: $transition-duration;
+	transition-property: color, background-color, border-color;
+	color: $color;
+	border-width: $border-width;
+	border-style: $border-style;
+	border-color: $border-color;
+	padding: $padding;
+	background-color: $bg-color;
+	border-radius: $border-radius;
+	cursor: pointer;
+	display: inline-block;
+	margin: $margin;
+	font-size: $font-size;
+	&:hover {
+		color: $hover-color;
+		background-color: $hover-bg-color;
+		border-color: $hover-border-color;
+	}
+}
+
+@mixin grid($bps:$bps, $prefix: "col", $num-cols: 12, $gutter-width: 0px, $vertical-align: top) {
+ 	@for $i from 1 through $num-cols  {
+ 		.#{$prefix}-#{$i} {
+ 			width: $i / $num-cols * 100%;
+			display:inline-block;
+ 		}
+ 	}
+ 	@each $bp-name, $bp in $bps {
+ 		@for $i from 1 through $num-cols  {
+ 			.#{$prefix}-#{$i}-#{$bp-name} {
+ 				@include bp($bp-name) {
+ 					width: $i / $num-cols * 100%;
+ 				}
+ 			}
+ 		}
+ 	}
+
+ 	[class*="#{$prefix}-"] {
+ 		display: inline-block;
+ 		box-sizing: border-box;
+ 		padding-right: $gutter-width;
+ 		vertical-align: $vertical-align;
+
+ 		&:last-of-type, .#{$prefix}-last {
+ 			padding-right: 0;
+ 		}
+ 	}
+ }
+
+@mixin youtube-icon(
+	$size: 50px,
+	$color: #c4302b, //youtube red
+	$detail-color: #fff,
+	$position: relative) {
+	position: $position;
+	display: inline-block;
+	width: $size;
+	height: $size * 0.70;
+	border-radius: $size * 0.1;
+	background-color: $color;
+	&:before {
+		@include center("both");
+		@include triangle($size: $size * 0.35, $color: $detail-color, $direction: "right", $skew-factor: 0.5);
+		margin-left: $size * 0.05;
+		content: "";
+	}
+}
+
+@mixin icon($type, $arguments...) {
+	@if $type == "youtube" {
+		$size: if(length($arguments) >=1, nth($arguments, 1), 50px);
+		$color: if(length($arguments) >=2, nth($arguments, 2), $red);
+		$detail-color: if(length($arguments) >=3, nth($arguments, 3), $white);
+
+		position: relative;
+		display: inline-block;
+		width: $size;
+		height: $size * 0.70;
+		border-radius: $size * 0.1;
+		background-color: $color;
+		&:before {
+			@include center("both");
+			@include triangle($size: $size * 0.35, $color: $detail-color, $direction: "right", $skew-factor: 0.5);
+			margin-left: $size * 0.05;
+			content: "";
+		}
+	} @else if $type == "x" {
+		$size: if(length($arguments) >=1, nth($arguments, 1), 30px);
+		$thickness: if(length($arguments) >=2, nth($arguments, 2), 4px);
+		$color: if(length($arguments) >=3, nth($arguments, 3), $red);
+		$angle-offset: if(length($arguments) >=4, nth($arguments, 4), 0);
+
+		position: relative;
+		width: $size;
+		height: $size;
+
+		$angle: 45 + $angle-offset;
+
+		&:before, &:after {
+			content: "";
+			display: block;
+			background-color: $color;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			height: $thickness;
+			width: $size;
+			transform-origin: 50%;
+			margin-top: -#{round($thickness / 2)};
+		}
+
+		&:before {
+			transform: rotate(#{$angle}deg);
+		}
+
+		&:after {
+			transform: rotate(-#{$angle}deg);
+		}
+	} @else if $type == "arrow" {
+		$direction: if(length($arguments) >=1, nth($arguments, 1), "left");
+		$width: if(length($arguments) >=2, nth($arguments, 2), 20px);
+		$stretch: if(length($arguments) >=3, nth($arguments, 3), 1);
+		$color: if(length($arguments) >=4, nth($arguments, 4), $black);
+		$bg-color: if(length($arguments) >=5, nth($arguments, 5), transparent);
+		$padding: if(length($arguments) >=6, nth($arguments, 6), 0);
+
+		$vert-width: $width * $stretch;
+
+		background-color: $bg-color;
+		&:hover, &:active, &:visited, &:focus {
+			background-color: $bg-color;
+		}
+		width: $width + $padding * 2;
+		height: $vert-width * 2 + $padding * 2.2;
+		position: relative;
+		padding: 0;
+
+		&:before {
+			content: "";
+			position: absolute;
+			width: 0;
+			height: 0;
+			top: 50%;
+			margin-top: -#{$vert-width};
+			border: $width solid transparent;
+			border-top-width: $vert-width !important;
+			border-bottom-width: $vert-width !important;
+			@if ($direction == "right") {
+				left: $padding;
+				border-left-color: $color !important;
+			} @else if ($direction == "left") {
+				right: $padding;
+				border-right-color: $color !important;
+			}
+		}
+	}
+}
+
+@mixin corner-button($color, $width) {
+	position: relative;
+	background-color: $color;
+	&:before, &:after {
+		position: absolute;
+		content: "";
+		display: block;
+		top: 0;
+
+		bottom: 0;
+	}
+	&:before {
+		border-right: $width solid $color;
+		border-bottom: $width solid transparent;
+		right: 100%;
+	}
+
+	&:after {
+		border-left: $width solid $color;
+		border-top: $width solid transparent;
+		left: 100%;
+	}
+}
+
+@mixin hamburger($width: 35px, $height: 25px, $bar-width: 5px, $color: white, $transition-duration: 100ms) {
+	position: relative;
+	cursor: pointer;
+	display: inline-block;
+	width: $width;
+	height: $bar-width;
+	// padding: 10px 35px 16px 0px;
+	background-clip: content-box;
+	box-sizing: content-box;
+	padding: (($height - $bar-width) / 2) 0;
+	background-color: $color;
+
+	transition: $transition-duration background-color ease-in-out;
+
+	&.active {
+		background-color: transparent;
+
+		&:before, &:after {
+			// margin-top: -$bar-width;
+		}
+		&:before {
+			transform: rotate(55deg);
+			top: 50%;
+			margin-top: -$bar-width / 2;
+		}
+
+		&:after {
+			transform: rotate(-55deg);
+			bottom: 50%;
+			margin-bottom: -$bar-width / 2;
+		}
+	}
+
+	&:before, &:after {
+		border-radius: 1px;
+		height: $bar-width;
+		width: $width;
+		background-color: $color;
+		position: absolute;
+		display: block;
+		content: '';
+		transition: all $transition-duration ease-in-out;
+	}
+
+	&:before {
+		top: 0;
+	}
+
+	&:after {
+		bottom: 0;
+	}
+}
+
+@mixin center($axis, $offsetY:0%, $offsetX:0%) {
+	position: absolute;
+
+	@if $axis == "y" {
+		top: 50% + $offsetY;
+		transform: translateY(-50%);
+	} @else if $axis == "x" {
+		left: 50% + $offsetX;
+		transform: translateX(-50%);
+	} @else if $axis == "both" {
+		left: 50% + $offsetX;
+		top: 50% + $offsetY;
+		transform: translate(-50%, -50%);
+	}
+}
+
+@function sqrt($r) {
+	$x0: 1;
+	$x1: $x0;
+
+	@for $i from 1 through 10 {
+		$x1: $x0 - ($x0 * $x0 - abs($r)) / (2 * $x0);
+		$x0: $x1;
+	}
+
+  @return $x1;
+}
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+@mixin home-icon($size: 15px, $color: black, $hover-color: gray, $transition-duration: 0.25s) {
+	position: relative;
+	display: inline-block;
+	border: ($size * .938) solid transparent;
+	margin-bottom: ($size * .938);
+	border-bottom-color: $color;
+	border-top: none;
+	transition: $transition-duration border-bottom-color;
+
+	&:hover {
+		border-bottom-color: $hover-color;
+
+		&:before, &:after {
+			background-color: $hover-color;
+		}
+	}
+
+	&:before, &:after {
+		content: "";
+		position: absolute;
+		width: $size * .563;
+		height: $size * .625;
+		background-color: $color;
+		transition: $transition-duration background-color;
+	}
+
+	&:before {
+		margin: ($size * .938) 0 0 (-$size * .688);
+	}
+
+	&:after {
+		margin: ($size * .938) 0 0 ($size * .125);
+	}
+}
+
+@mixin triangle($size: 10px, $color: black, $hover-color: $color, $direction: "right", $skew-factor: 1, $transition-duration: 0.25s) {
+	content: "";
+	display: block;
+	position: absolute;
+	border: $size solid transparent;
+	transition: $transition-duration border-color;
+
+	$skew-width: $skew-factor * $size;
+	$right: ("right", "e");
+	$left: ("left", "w");
+	$down: ("down", "s");
+	$up: ("up", "n");
+	$vert: join($up, $down);
+	$horiz: join($left, $right);
+
+	@if index($vert, $direction) {
+		border-right-width: $skew-width;
+		border-left-width: $skew-width;
+		@if index($up, $direction) {
+			border-bottom-color: $color;
+			&:hover {
+				border-bottom-color: $hover-color;
+			}
+			border-top: none;
+		} @else if index($down, $direction) {
+			border-top-color: $color;
+			&:hover {
+				border-top-color: $hover-color;
+			}
+			border-bottom: none;
+		}
+	} @else if index($horiz, $direction) {
+		border-top-width: $skew-width;
+		border-bottom-width: $skew-width;
+		@if index($left, $direction) {
+			border-right-color: $color;
+			&:hover {
+				border-right-color: $hover-color;
+			}
+			border-left: none;
+		} @else if index($right, $direction) {
+			border-left-color: $color;
+			&:hover {
+				border-left-color: $hover-color;
+			}
+			border-right: none;
+		}
+	}
+}
+
+@mixin aspect-wrappers($prefix, $aspect-ratios: $global-aspect-ratios) {
+	@each $key, $aspect-ratio in $aspect-ratios {
+		.#{$prefix}-#{$key} {
+			@include aspect-ratio(nth($aspect-ratio, 1), nth($aspect-ratio, 2));
+		}
+	}
+}

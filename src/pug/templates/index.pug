@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+    title=locals.meta.title
+    meta(name="author",content=locals.meta.author)
+    meta(name="description",content=locals.meta.description)
+    meta(name="keywords",content=locals.meta.keywords)
+    link(href="https://fonts.googleapis.com/css?family=Lato:400,700|Droid+Sans:400,700",type="text/css",rel="stylesheet")
+    link(href="css/screen.css",type="text/css",rel="stylesheet")
+  body
+    #wrapper-main
+      header
+        h1=locals.header.name
+        h2=locals.header.site_title
+        if locals.header.contact
+          each item in locals.header.contact
+            a.contact(href=item.url)=item.text
+        if locals.header.nav
+          nav
+            ul
+              each link in locals.header.nav
+                li
+                  a(href=link.url,class=link.class)=link.text
+      section.content
+        each section,index in locals.sections
+          section(id="section"+index)
+            p=section.intro
+            if section.jobs
+              include inc/jobs.pug
+            if section.sites
+              include inc/portfolio.pug
+      footer
+        p=locals.footer.legal
+    script(src='js/bundle.js')
