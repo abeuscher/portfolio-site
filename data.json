@@ -11,7 +11,7 @@
         "nav": [{
             "text": "",
             "class": "icon-github",
-            "url": "#"
+            "url": "https://github.com/abeuscher/portfolio-site"
         }, {
             "text": "",
             "class": "icon-linkedin",
@@ -34,44 +34,44 @@
         "intro": "I am a web developer living in Alameda, California. I most recently worked at 2K Games as a Senior Web Developer and am currently seeking employment in a development or managerial role. I have eighteen years of experience working on the web, and have worked in organizations of all sizes. My recent focus has been in front end work with a focus on localization and security.",
         "sites": [{
             "title": "XCOM",
-            "thumb": "thm-xcom-desktop.jpg",
-            "description": "Description (mention tellemetry)",
+            "thumbs": ["thm-xcom-desktop.jpg","thumb-xcom-mobile.jpg"],
+            "description": "This site was built using Expression Engine. News was imported to the site from a central CMS, where localized content was provided by editors in multiple locations. The site also feature a telemtry piece, which is a javascript application which surfaces data from a REST API provided to us by the developer, Firaxis Games.",
             "url": "https://www.xcom.com"
         }, {
             "title": "WWE 2K",
-            "thumb": "thm-wwe-desktop.jpg",
-            "description": "",
+            "thumbs": ["thm-wwe-desktop.jpg","thumb-wwe-mobile.jpg"],
+            "description": "This site was built using Expression Engine, with a centralized CMS.",
             "url": "https://wwe.2k.com/"
         }, {
             "title": "WWE 2K Logo Uploader",
-            "thumb": "thm-uploader-desktop.jpg",
-            "description": "",
+            "thumbs": ["thm-uploader-desktop.jpg"],
+            "description": "This site was built to interface with the in game experience of WWE 2K. Players may upload and manage their in game images from the site. This was a front end application built in javascript with a php component, connecting to a REST API endpoint provided through a third party.",
             "url": "https://wwe.2k.com/wwe2k17logo/"
         }, {
             "title": "Borderlands",
-            "thumb": "thm-borderlands-desktop.jpg",
+            "thumbs": ["thm-borderlands-desktop.jpg","thumb-borderlands-mobile.jpg"],
             "description": "",
             "url": "https://www.borderlandsthegame.com/"
         }, {
             "title": "Hangar 13 Games",
-            "thumb": "thm-hangar13-desktop.jpg",
+            "thumbs": ["thm-hangar13-desktop.jpg","thumb-hangar13-mobile.jpg"],
             "description": "",
             "url": "https://hangar13games.com/"
         }, {
             "title": "2K Support",
-            "thumb": "thm-support-desktop.jpg",
+            "thumbs": ["thm-support-desktop.jpg","thumb-support-mobile.jpg"],
             "description": "Zendesk theming",
             "url": "http://support.2k.com"
         }, {
-            "title": "MCO Productions",
-            "thumb": "thm-mco-desktop.jpg",
-            "description": "",
-            "url": "http://mcoproductions.com"
-        }, {
             "title": "DJ Michael",
-            "thumb": "thm-djm-desktop.jpg",
+            "thumbs": ["thm-djm-desktop.jpg","thumb-djm-mobile.jpg"],
             "description": "",
             "url": "http://djmichael.com"
+        }, {
+            "title": "MCO Productions",
+            "thumbs": ["thm-mco-desktop.jpg"],
+            "description": "",
+            "url": "http://mcoproductions.com"
         }]
     }, {
         "title": "resume",

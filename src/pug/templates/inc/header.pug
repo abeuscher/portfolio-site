@@ -1,0 +1,12 @@
+header
+  h1=locals.header.name
+  h2=locals.header.site_title
+  if locals.header.contact
+    each item in locals.header.contact
+      a.contact(href=item.url)=item.text
+  if locals.header.nav
+    nav
+      ul
+        each link in locals.header.nav
+          li
+            a(href=link.url,class=link.class,target="_blank")=link.text

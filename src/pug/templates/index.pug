@@ -11,18 +11,7 @@ html(lang="en")
     link(href="css/screen.css",type="text/css",rel="stylesheet")
   body
     #wrapper-main
-      header
-        h1=locals.header.name
-        h2=locals.header.site_title
-        if locals.header.contact
-          each item in locals.header.contact
-            a.contact(href=item.url)=item.text
-        if locals.header.nav
-          nav
-            ul
-              each link in locals.header.nav
-                li
-                  a(href=link.url,class=link.class)=link.text
+      include inc/header.pug
       section.content
         each section,index in locals.sections
           section(id="section"+index)
