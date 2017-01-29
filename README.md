@@ -1,6 +1,5 @@
-## Alex Beuscher
-
-### Resume and Portfolio [alexbeuscher.com](http://alexbeuscher.com)
+## Alex Beuscher - Resume and Portfolio
+### [alexbeuscher.com](http://alexbeuscher.com)
 
 #### Overview
 
