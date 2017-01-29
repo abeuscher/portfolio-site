@@ -123,10 +123,7 @@ gulp.task('templates', function() {
     .pipe(pug({"pretty":true,"locals":require("./data.json")}))
     .pipe(gulp.dest(pugBuildDir, {ext: '.html'}));
 });
-gulp.task('move-files', function() {
-  gulp.src([miscSrcDir + "*/**",miscSrcDir + "*"])
-    .pipe(gulp.dest(buildDir))
-});
+
 gulp.task('uglify-js', function(){
     return gulp.src(jsBuildDir + '*.js')
         .pipe(uglify().on("error",function(e) {console.log(e,"uglify fail");}))
@@ -138,4 +135,4 @@ gulp.task('build-js', function(){
 });
 
 // Default Task
-gulp.task('default', ['compile-sass-autoprefixed-minified','templates', 'build-js','move-files','watch-files']);
+gulp.task('default', ['compile-sass-autoprefixed-minified','templates', 'build-js','watch-files']);
