@@ -129,10 +129,13 @@ gulp.task('uglify-js', function(){
         .pipe(uglify().on("error",function(e) {console.log(e,"uglify fail");}))
         .pipe(gulp.dest(jsBuildDir));
 });
-
+gulp.task('move-files', function() {
+  gulp.src([miscSrcDir + "*/**",miscSrcDir + "*"])
+    .pipe(gulp.dest(buildDir))
+});
 gulp.task('build-js', function(){
     runSequence('bundle-js','uglify-js');
 });
 
 // Default Task
-gulp.task('default', ['compile-sass-autoprefixed-minified','templates', 'build-js','watch-files']);
+gulp.task('default', ['compile-sass-autoprefixed-minified','templates', 'build-js','move-files','watch-files']);

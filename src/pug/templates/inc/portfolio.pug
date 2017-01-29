@@ -2,6 +2,7 @@
   .col-12-m
     h2=section.sites_title
   each site,index in section.sites
+    - site.imgPath = locals.config.imgPath
     if section.sites[index-1]
       - site.prev = index - 1
     if section.sites[index+1]
