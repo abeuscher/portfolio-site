@@ -4,24 +4,53 @@
 @import "./_sass-mixins.scss";
 @import "./_modal.scss";
 @import "./_icons.scss";
-.grid {
-  @include grid();
-  .row.pad {
-    margin:0 -20px;
-    &> [class*=col] {
-      padding:20px;
+@import '../../node_modules/susy/sass/_susy.scss';
+//Basic Structure
+.row {
+    @include container();
+    @for $i from 1 through $num-cols {
+        .#{$prefix}-#{$i} {
+            @include span($i);
+        }
     }
-  }
+
+    .gutter-0 {
+        @include container();
+    }
+    @each $bp, $val in $bps {
+         @media (min-width: $val){
+            @for $i from 1 through $num-cols {
+                .#{$prefix}-#{$i}-#{$bp} {
+                    @include span($i);
+                }
+            }
+        }
+    }
 }
+//Basic Styles
 body {
     font-family: $body-font;
     background: $body-bg-color;
     color: $body-text-color;
-    position:relative;
+    position: relative;
+
+    &.modal-open {
+        overflow: hidden;
+    }
+
+    .centered {
+        text-align: center;
+    }
+
+    .right {
+        text-align: right;
+    }
+
     a {
         text-decoration: none;
         color: $body-link-color;
     }
+
     h1,
     h2,
     h3,
@@ -30,114 +59,271 @@ body {
     h6 {
         font-family: $header-font;
         font-size: $header-font-size;
-        font-weight: normal;
-        text-transform:uppercase;
-        margin:0;
-        padding:0;
-        line-height:1.2em;
+        color: $header-color;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 0;
+        line-height: 1.2em;
     }
+
+    h2 {
+        font-size: 30px;
+        margin: 0 0 20px;
+    }
+
     li,
     p {
         line-height: 1.6;
         margin: 0 0 1em;
         font-size: 20px;
     }
+
     img {
-      max-width:100%;
+        max-width: 100%;
     }
+
     #wrapper-main {
-      width:94%;
-      margin:0 3%;
-      @include bp(s) {
-        width:90%;
-        margin:0 5%;
-      }
-      @include bp(l) {
-        width:80%;
-        margin:0 10%;
-      }
+        width: 94%;
+        margin: 0 3%;
+        background: $wrapper-bg-color;
+        box-shadow: -2px 2px 5px #666;
+        @include bp(s) {
+            width: 90%;
+            margin: 0 5%;
+        }
+        @include bp(l) {
+            width: 80%;
+            margin: 0 10%;
+        }
+
+        .inner {
+            padding: $gutter-width $gutter-width * 2/3;
+        }
     }
 }
+//Nav, Header, and Footer
+#top-nav {
+    background: url(#{$img-path + "bg-header.jpg"}) no-repeat center top;
+    width: 100%;
+    color: #fff;
+    background-size: cover;
+    text-align: center;
+
+    ul {
+        @include list-to-menu();
+        display: inline-block;
+
+        li {
+            padding: 0 0.25em;
+            margin: 0;
+            @include bp(s) {
+                padding: 0 1em;
+            }
+
+            a {
+                display: block;
+                font-size: 0.8em;
+                line-height: $gutter-width;
+                color: #fff;
+                transition: 0.25s text-shadow ease-in;
+                text-shadow: -1px 1px 5px #000;
+
+                &:hover {
+                    text-shadow: -1px 1px 10px #000;
+                }
+            }
+        }
+    }
+}
+
 header {
-  padding:40px 0;
-  text-align:center;
-  .contact {
-    display:block;
-  }
-}
-.loc, .url {
-  text-align:right;
-  line-height:1;
-  margin:0;padding:0;
-}
-.url {
-  float:right;
-  font-size:.6em;
-  margin-top:.5em;
-}
-.loc {
-  font-style:italic;
-}
-.timespan {
-  text-align:right;
-  padding-right:1.5em;
+    padding: 80px 0;
+    text-align: center;
+
+    h1 {
+        font-family: $logo-font;
+        color: $logo-color-rest;
+
+        .dark {
+            color: $logo-color-first;
+        }
+        font-size: 1.5em;
+        @include bp(m) {
+            font-size: 5em;
+        }
+    }
+
+    h2 {
+        font-size: 1.25em;
+        font-family: $body-font;
+        @include bp(m) {
+            font-size: 2em;
+        }
+    }
+
+    .contact {
+        display: inline-block;
+        margin: 0.8em 0.5em;
+    }
 }
 
-.portfolio {
-  .thumb {
-    @include aspect-ratio(640,394);
-    cursor:pointer;
-    position:relative;
-    h3 {
-      background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 50%,rgba(0,0,0,1) 100%);
-      color:#fff;
-      margin:-5px 0 0;
-      padding:0;
-      text-align: center;
-      height:auto;
-      bottom:0;
-      top:auto;
-      width:100%;
-      line-height:2em;
-    }
-  }
-
-}
-.jobs {
-  background:#fff;
-  max-width:1280px;
-  width:80%;
-  margin:0 auto;
-  padding:0 40px 40px;
-  .job_meta {
-    p {
-      font-size:1em;
-      margin:0 0 40px;
-    }
-  }
-  h4 {
-    margin-top:40px;
-    @include bp(s) {
-      border-bottom:1px solid #ccc;
-    }
-  }
-  .position {
-    h4 {
-      margin:0;
-    }
-  }
-}
 nav {
-  ul {
-    list-style:none;
-    margin:0; padding:0;
-    li {
-      display:inline-block;
-      padding-right:20px;
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            padding-right: 20px;
+        }
     }
-  }
 }
+
 footer {
-  margin:100px auto;
-  text-align:center;
+    margin: 100px auto;
+    text-align: center;
+}
+//Content Sections
+.content {
+    margin-bottom: $gutter-width;
+}
+
+.overview {
+    ul.skills {
+        display: flex;
+        flex-wrap: wrap;
+        margin: $gutter-width/2 0 0;
+        padding: 0;
+        vertical-align: top;
+
+        li {
+            display: inline-block;
+            vertical-align: top;
+            flex-grow: 1;
+            padding: 0;
+            margin: 0;
+
+            .skill-box {
+                margin: 5px;
+                padding: 5px;
+                background: #fff;
+                text-align: center;
+
+                p {
+                    margin: 0;
+                    font-size: 1em;
+                    line-height: 1;
+                    overflow: hidden;
+                }
+
+                .stars {
+                    font-size: 0.8em;
+                }
+            }
+        }
+    }
+}
+
+.thumbs {
+    margin-bottom: $gutter-width;
+
+    .thumb {
+        @include aspect-ratio(640,394);
+        cursor: pointer;
+    }
+
+    h3 {
+        text-align: center;
+        line-height: 2;
+    }
+
+    p.tech {
+        text-align: center;
+        text-transform: none;
+        font-style: italic;
+        color: #000;
+        font-size: 1em;
+        margin: 0 $gutter-width $gutter-width;
+    }
+}
+
+.job {
+    margin-bottom: $gutter-width;
+    padding: 0;
+
+    h4,
+    h5 {
+        color: $off-black;
+    }
+
+    h5 {
+        font-size: 1.2em;
+    }
+
+    .timespan {
+        font-size: 0.8em;
+    }
+
+    cite {
+        display: block;
+        margin-bottom: $gutter-width/4;
+    }
+
+    .description {
+        display: block;
+        clear: both;
+        padding-right: 10px;
+    }
+
+    .thumb-bucket {
+        float: left;
+        margin-right: 20px;
+        text-align: center;
+
+        img {
+            display: inline-block;
+            max-width: 100%;
+            position: relative;
+        }
+
+        a.url {
+            display: block;
+            line-height: 2em;
+            vertical-align: middle;
+            font-size: 0.75em;
+            color: $off-black;
+        }
+    }
+}
+
+.modal {
+    .modal-nav {
+      margin-bottom:$gutter-width * 1.5;
+      a {
+        text-transform:uppercase;
+        font-size:.8em;
+        font-weight:700;
+      }
+
+      .url {
+        display:block;
+        text-transform:none;
+        font-size:.75em;
+      }
+    }
+    h2 {
+        text-align: center;
+        font-size: 2em;
+    }
+
+    .thm {
+        display: block;
+        text-align: center;
+
+        img {
+            max-width: 100%;
+        }
+    }
 }

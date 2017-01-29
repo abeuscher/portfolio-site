@@ -1,4 +1,7 @@
 {
+    "config": {
+        "imgPath":"http://cdn.alexbeuscher.com/alexbeuscher.com/img/"
+    },
     "meta": {
         "title": "Alex Beuscher : Resume and Portfolio",
         "author": "Alex Beuscher",
@@ -6,8 +9,8 @@
         "keywords": "front end developer, web development alameda"
     },
     "header": {
-        "name": "Alex Beuscher",
-        "site_title": "Resume and Portfolio",
+        "name": "<span class='dark'>A</span>lex <span class='dark'>B</span>euscher",
+        "site_title": "Resume & Portfolio",
         "nav": [{
             "text": "",
             "class": "icon-github",
@@ -17,166 +20,263 @@
             "class": "icon-linkedin",
             "url": "https://www.linkedin.com/in/alex-beuscher-8314157/"
         }],
-        "contact":[{
-            "text":"617.359.6971 c",
-            "url":"tel:6173596971"
-          },{
-              "text":"alexbeuscher@gmail.com",
-              "url":"mailto:alexbeuscher@gmail.com"
-            }
-        ]
+        "contact": [{
+            "text": "alexbeuscher@gmail.com",
+            "url": "mailto:alexbeuscher@gmail.com"
+        }, {
+            "text": "617.359.6971",
+            "url": "tel:6173596971"
+        }]
     },
     "footer": {
         "legal": "© Alex Beuscher 2017. All Rights Reserved, more or less."
     },
     "sections": [{
+        "title":"overview",
+        "intro_header": "Overview",
+        "intro": "My name is Al and I build websites. I most recently worked at 2K Games as Senior Web Developer and am currently seeking employment in a development or managerial role. I have eighteen years of experience working on the web, and have worked in organizations of all sizes. My recent focus has been in front end work but I have a strong familiarity with linux servers, web security, and php frameworks. I have delivered web applications with large front and back end components. If you have contract work or require any web consulting, I am happy to provide those services as well, and have served individual clients intermittently throughout my career. I make strong contributions to teams I work on, and I know how to deliver on time.",
+        "skills_header": "Skills",
+        "skills": [{
+            "title": "Javascript",
+            "level": 3
+        }, {
+            "title": "HTML",
+            "level": 3
+        }, {
+            "title": "PHP",
+            "level": 2
+        }, {
+            "title": "jQuery",
+            "level": 3
+        }, {
+            "title": "SQL",
+            "level": 2
+        }, {
+            "title": "CSS / SCSS",
+            "level": 3
+        }, {
+            "title": "Angular",
+            "level": 1
+        }, {
+            "title": "React",
+            "level": 1
+        }, {
+            "title": "Gulp",
+            "level": 2
+        }, {
+            "title": "Expression Engine",
+            "level": 3
+        }, {
+            "title": "Wordpress",
+            "level": 2
+        }, {
+            "title": "Drupal",
+            "level": 1
+        }, {
+            "title": "Cockpit CMS",
+            "level": 3
+        }, {
+            "title": "vBulletin",
+            "level": 2
+        }, {
+            "title": "Adobe Design",
+            "level": 3
+        }, {
+            "title": "ZenDesk",
+            "level": 1
+        }, {
+            "title": "Git",
+            "level": 3
+        }, {
+            "title": "Jade/Pug",
+            "level": 3
+        }]
+      },{
         "title": "portfolio",
-        "intro": "I am a web developer living in Alameda, California. I most recently worked at 2K Games as a Senior Web Developer and am currently seeking employment in a development or managerial role. I have eighteen years of experience working on the web, and have worked in organizations of all sizes. My recent focus has been in front end work with a focus on localization and security.",
+        "sites_title": "Case Studies",
         "sites": [{
             "title": "XCOM",
-            "thumbs": ["thm-xcom-desktop.jpg","thumb-xcom-mobile.jpg"],
+            "thumbs": ["thm-xcom-desktop.jpg", "thm-xcom-mobile.jpg"],
+            "role": "Developer",
+            "tech": "Expression Engine, Tellemetry, Localization",
             "description": "This site was built using Expression Engine. News was imported to the site from a central CMS, where localized content was provided by editors in multiple locations. The site also feature a telemtry piece, which is a javascript application which surfaces data from a REST API provided to us by the developer, Firaxis Games.",
-            "url": "https://www.xcom.com"
+            "url": "https://www.xcom.com",
+            "modal_thumb" : "thm-xcom-modal.jpg"
         }, {
             "title": "WWE 2K",
-            "thumbs": ["thm-wwe-desktop.jpg","thumb-wwe-mobile.jpg"],
-            "description": "This site was built using Expression Engine, with a centralized CMS.",
-            "url": "https://wwe.2k.com/"
+            "thumbs": ["thm-wwe-desktop.jpg", "thm-wwe-mobile.jpg"],
+            "role": "Developer",
+            "tech": "Expression Engine, Localization, Oauth",
+            "description": "This site was built using Expression Engine, with a centralized CMS. In its iteration, WWE 2K has become a sophisticated site. As we grew to understand the brand and audience and streamline our own processes, we were better able to serve the need. Introducing third party developers into a secure, distributed environment was an ongoing challenge while at 2K. We worked to incorporate a third party promotional web application with the site in its most recent year, where visitors could participate in a small web game which encouraged sign up for My2K, a customer loyalty program.",
+            "url": "https://wwe.2k.com/",
+            "modal_thumb" : "thm-wwe-modal.jpg"
         }, {
             "title": "WWE 2K Logo Uploader",
             "thumbs": ["thm-uploader-desktop.jpg"],
-            "description": "This site was built to interface with the in game experience of WWE 2K. Players may upload and manage their in game images from the site. This was a front end application built in javascript with a php component, connecting to a REST API endpoint provided through a third party.",
-            "url": "https://wwe.2k.com/wwe2k17logo/"
+            "role": "Developer",
+            "tech": "PHP, Rest API, Memcache, Oauth",
+            "description": "This site was built to interface with the in-game experience of WWE 2K. Players may upload and manage their in game images from the site. This was a front end application built in javascript with a php component, connecting to a REST API endpoint provided through a third party. The interior design of the application was skinned to match the in game experience.",
+            "url": "https://wwe.2k.com/wwe2k17logo/",
+            "modal_thumb" : "thm-wwe-modal.jpg"
         }, {
             "title": "Borderlands",
-            "thumbs": ["thm-borderlands-desktop.jpg","thumb-borderlands-mobile.jpg"],
-            "description": "",
-            "url": "https://www.borderlandsthegame.com/"
+            "thumbs": ["thm-borderlands-desktop.jpg", "thm-borderlands-mobile.jpg"],
+            "role": "Developer",
+            "tech": "Expression Engine, Localization, Social Media API",
+            "description": "Borderlands is a large, well known franchise. The challenge here was in creating a visual spectacle with the site to showcase the franchise's unique look and feel. Also, with a large amount of DLC, the relationships between various products and package deals was a taxonomical challenge. With a localized site, content spaces with so much imagery had to be carefully designed to be flexible to fit differently sized strings. Additionally, the site features social media API interaction and a Skill Tree calculator web application.",
+            "url": "https://www.borderlandsthegame.com/",
+            "modal_thumb" : "thm-borderlands-modal.jpg"
         }, {
             "title": "Hangar 13 Games",
-            "thumbs": ["thm-hangar13-desktop.jpg","thumb-hangar13-mobile.jpg"],
-            "description": "",
-            "url": "https://hangar13games.com/"
+            "thumbs": ["thm-hangar13-desktop.jpg", "thm-hangar13-mobile.jpg"],
+            "role": "Developer",
+            "tech": "Static Generated, Continuous Deployment, Rest API based CMS, Jade/Pug",
+            "description": "This is a small site for one of 2k's Game Developers. It is fed by a centralized CMS, and statically generated under continuous deploy using TeamCity as the build agent. With smaller clients, there is often a problem of throughput. In this case, the studio's active social media activity to keep their site in the moment, along with relevant aggregated news from mafiagame.com, which showcases the studios current offering, Mafia 3. By organizing the content in chronological order from most recent, returning visitors are given content to engage with the studio on, with very little additional input from their team.",
+            "url": "https://hangar13games.com/",
+            "modal_thumb" : "thm-hangar13-modal.jpg"
         }, {
             "title": "2K Support",
-            "thumbs": ["thm-support-desktop.jpg","thumb-support-mobile.jpg"],
-            "description": "Zendesk theming",
+            "thumbs": ["thm-support-desktop.jpg", "thm-support-mobile.jpg"],
+            "role": "Developer",
+            "tech": "Zendesk, Custom Theming",
+            "description": "This was a custom theme applied to Zendesk, to match the look and feel of the company's main website. The main site was built by a third party to be very modern in appearance and responsive. Mimicking this behavior within a fairly locked framework was an interesting challenge. In this case, the solution was brute force and trial and error.",
             "url": "http://support.2k.com"
         }, {
             "title": "DJ Michael",
-            "thumbs": ["thm-djm-desktop.jpg","thumb-djm-mobile.jpg"],
-            "description": "",
+            "thumbs": ["thm-djm-desktop.jpg", "thm-djm-mobile.jpg"],
+            "role": "Private Contractor",
+            "tech": "Cockpit CMS, Jade/Pug, Templating",
+            "description": "This is a site built for Michael O'Neill, who provides DJ services for weddings and events throughout New England. The site is built with Cockpit CMS and custom. Design work was sub contracted, and provided as PSD's. I did the site build using a basic preprocessing script leveraging gulp and browserify, and the templates are done in php. This was a straightforward job with an old friend and client, and I am happy with the result.",
             "url": "http://djmichael.com"
         }, {
             "title": "MCO Productions",
             "thumbs": ["thm-mco-desktop.jpg"],
-            "description": "",
+            "role": "Private Contractor",
+            "tech": "Wordpress, Custom Theme",
+            "description": "This site is currently under rebuild. In its current iteration, the site is built in Wordpress with a custom theme and some custom plugin work as well. Future build will utilize Cockpit CMS, and feature more application like behavior and a cleaner more modern design.",
             "url": "http://mcoproductions.com"
         }]
     }, {
         "title": "resume",
         "intro": "",
         "pdf_link": "",
+        "jobs_title": "Work History",
         "jobs": [{
             "name": "2K Games",
-            "description": "2K Games is a video game publisher for titles such as Civilization, WWE 2K, NBA 2K, and Borderlands.",
+            "description": "I was the first developer on the web team at 2K. Previously sites were built primarily through managed third parties. There was no source control or modular approach to site builds. As a means to help our editors, we planned and built a central CMS as a data source. From here we exported data to our public facing sites, both those built internally and those sourced from third parties. We also added source control and continuous deploy, and adopted a modular approach to code building. In the course of this, we began hosting sites in AWS, migrating older properties from a less sophisticated server environment. After growing our team I was promoted to a senior position. By the end of my time at 2K, most work was being done in house, with a greatly improved content editing workflow.",
             "location": "Novato, CA",
-            "url": "www.2k.com",
+            "url": "2k.com",
+            "thumb": "thm-2k.jpg",
             "positions": [{
                 "time_span": "2016 - 2017",
                 "title": "Senior Web Developer",
-                "description": "After growing our team I was promoted to a senior position, indicating a greater level of control over our projects and upward feeedback regarding layouts, user experience, and management of the development team."
+                "description": ""
             }, {
                 "time_span": "2013 - 2016",
                 "title": "Web Developer",
-                "description": "When I was hired, the company was largely outsourcing their web work and did not have an in house developer. Over the course of my time at 2K, the web department matured significantly, modernizing our processes and greatly improving efficiency within the company. Initial challenges included managing a disparate group of third party sites using different technologies and with varying depencies and levels of complication. Most sites were localized to between 6 and 9 languages, presenting another interesting set of challenges. Over the course of my time at 2K, we centralized our data inputs to a single CMS. In its second incarnation, the CMS is accessed via API to a set of statically built sites under continuous deploy."
+                "description": ""
             }]
         }, {
             "name": "Medley Health",
-            "description": "Medley was a startup company in the medical industry, who provided membership model practice management services for primary care physicians. The company is now defunct.",
+            "description": "Medley was a startup company in the medical industry, who provided membership model practice management services for primary care physicians. I ran their public websites, managed content, and provided other web related support and development. The company is now defunct.",
             "location": "Dublin, CA",
-            "url": "www.medleyhealth.com",
+            "url": "medleyheath.com",
+            "thumb": "thm-medley.jpg",
             "positions": [{
                 "time_span": "2011 - 2012",
                 "title": "Web Content Manager / Developer",
-                "description": "I ran their public websites, managed content, and provided other web related support and development."
+                "description": ""
             }]
         }, {
             "name": "WAAF and Mike FM (Entercom)",
-            "description": "WAAF and Mike FM are/were two Boston music radio stations owned by Entercom. WAAF remains a top rated station, while Mike FM has since gone off-air.",
+            "description": "WAAF and Mike FM are/were two Boston music radio stations owned by Entercom. WAAF remains a top rated station, while Mike FM has since gone off-air. I managed a team of content producers, and also worked in a variety of roles to support and create video, web, and mobile content for our listeners in conjunction with our station's on-air personalities as well as local and national celebrities.",
             "location": "Brighton, MA",
-            "url": "www.waaf.com",
+            "url": "waaf.com",
+            "thumb": "thm-waaf.jpg",
             "positions": [{
                 "time_span": "2008 - 2011",
                 "title": "Online Content Director",
-                "description": "I managed a team of content producers, and also worked in a variety of roles to support and create video, web, and mobile content for our listeners in conjunction with our station's on-air personalities as well as local and national celebrities."
+                "description": ""
             }]
         }, {
             "name": "Boston Interactive",
-            "description": "Boston Interactive is a leading design firm.",
+            "description": "Boston Interactive is a leading design firm. My duties as a developer there ranged from markup and CSS layout to some php programming projects and a good deal of javascript work. Among the clients serviced were FAO Schwartz, New England Coffee, MedAssets, and many others.",
             "location": "Charlestown, MA",
-            "url": "www.bostoninteractive.com",
+            "url": "bostoninteractive.com",
+            "thumb": "thm-bi.jpg",
             "positions": [{
                 "time_span": "2007 - 2008",
                 "title": "Web Developer",
-                "description": "My duties as a developer there ranged from markup and CSS layout to some php programming projects and a good deal of javascript work. Among the clients serviced were FAO Schwartz, New England Coffee, MedAssets, and many others."
+                "description": ""
             }]
         }, {
             "name": "Nurse-Recruiter.com",
-            "description": "Nurse-Recruiter is an online job portal for nurses, similar to Monster.com but specialized.",
+            "description": "Nurse-Recruiter is an online job portal for nurses, similar to Monster.com but specialized. My duties included the design and implementation of an intranet, and redevelopment of web software from PERL into PHP. I also rewrote most of the content on the site for SEO value as well as style, and increased total web visitors as well as goal conversions by over 100% in 10 months.",
             "location": "Wellesley, MA",
-            "url": "www.nurse-recruiter.com",
+            "url": "nurse-recruiter.com",
+            "thumb": "thm-nr.jpg",
             "positions": [{
                 "time_span": "2006 - 2007",
                 "title": "Lead Web Developer",
-                "description": "My duties included the design and implementation of an intranet, and redevelopment of web software from PERL into PHP. I also rewrote most of the content on the site for SEO value as well as style, and increased total web visitors as well as goal conversions by over 100% in 10 months."
+                "description": ""
             }]
         }, {
             "name": "MCO Productions",
-            "description": "",
+            "description": "I have run pub trivia on and off for years, and have experience in DJ'ing and MC'ing functions such as weddings, special events, and parties. I have a full PA system and contract independently.",
             "location": "Brighton, MA",
-            "url": "www.mcoproductions.com",
+            "url": "mcoproductions.com",
+            "thumb": "thm-mco.jpg",
             "positions": [{
                 "time_span": "2001 - 2011",
                 "title": "Trivia DJ",
-                "description": "I have run pub trivia on and off for years, and have experience in DJ'ing and MC'ing functions such as weddings, special events, and parties. I have a full PA system and contract independently. "
+                "description": ""
             }]
         }, {
             "name": "Freelance Web Design",
-            "description": "",
+            "description": "I employ myself on and off as a freelance developer and designer. Along with my web work, I do consulting in basic IT, application training, and print design.",
             "location": "Allston, MA / Alameda, CA",
-            "url": "",
+            "url": "alexbeuscher.com",
+            "thumb": "thm-self.jpg",
             "positions": [{
                 "time_span": "1998 - present",
                 "title": "Self Employed",
-                "description": "I employ myself on and off as a freelance developer and designer. Along with my web work, I do consulting in basic IT, application training, and print design."
+                "description": ""
             }]
         }, {
             "name": "SSDS",
-            "description": "Solomon Schechter Day School is a private elementary school.",
+            "description": "Solomon Schechter Day School is a private elementary school. Taught video and web design to children ages 9 to 12 at After School Program. For video, students learned to work with a camera, plan movies, and make short films. In web we learned to make a basic site using a text editor and graphics tools.",
             "location": "",
-            "url": "www.ssdsboston.org",
+            "url": "ssdsboston.org",
+            "thumb": "thm-ssds.jpg",
             "positions": [{
                 "time_span": "2001 - 2003",
                 "title": "Afterschool Instructor",
-                "description": "Taught video and web design to children ages 9 to 12 at After School Program. For video, students learned to work with a camera, plan movies, and make short films. In web we learned to make a basic site using a text editor and graphics tools."
+                "description": ""
             }]
         }, {
             "name": "AMICAS, Inc.",
-            "description": "AMICAS provides software for the management and viewing of medical images (x-rays) inside of a web browser on standard PC's.",
+            "description": "AMICAS provides software for the management and viewing of medical images (x-rays) inside of a web browser on standard PC's. My responsibilities included redesign and implementation of public website as well as the design of an Intranet Site.",
             "location": "Brighton, MA / Chicago, IL",
-            "url": "",
+            "url": "amicas.com",
+            "thumb": "thm-amicas.jpg",
             "positions": [{
                 "time_span": "1997 - 2000",
                 "title": "Webmaster",
-                "description": "My responsibilities included redesign and implementation of public website as well as the design of an Intranet Site."
+                "description": ""
             }]
         }],
         "education": [{}, {}],
-        "skills": {
-            "Languages": ["PHP", "SQL", "HTML", "CSS", "Javascript", "jQuery", "ASP", "Angular"],
-            "Web Apps and Tools": ["Expression Engine", "Wordpress", "Drupal", "Git", "Cockpit CMS", "vBulletin", "ZenDesk", "More (please ask if you don't see what you're looking for)"],
-            "Miscellaneous": ["Video Production (scheduling, casting, location production, live shoots, editing, publishing)", "Audio Work (voice acting, production)", "DJ (Master of Ceremonies, Event Programming, Music Programming, Pub Trivia)", "Teacher (Elementary through Middle School - uncertified)", "Drums (intermediate)", "Writing (copy-editing, writing for web, creative, business,technical writing and documentation)"]
-        }
+        "skills": [{
+                "title": "Languages",
+                "items": ["PHP", "SQL", "HTML", "CSS", "Javascript", "jQuery", "ASP", "Angular"]
+            },
+            {
+                "title": "Tools",
+                "items": ["Expression Engine", "Wordpress", "Drupal", "Git", "Cockpit CMS", "vBulletin", "Adobe Design Suite", "Maya", "ZenDesk", "Jade/Pug", "More"]
+            }, {
+                "title": "Other",
+                "items": ["Video Production", "Audio Editing / Voice Over", "DJ", "Teacher (uncertified)", "Drums (intermediate)", "Writing (technical, journalistic, copy editing)"]
+            }
+        ]
     }]
 }

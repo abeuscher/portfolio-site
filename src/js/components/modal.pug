@@ -1,5 +1,31 @@
 .modal-overlay
   .modal
     a.close &times;
-    h1=locals.title
-    p=locals.description
+    .row.modal-nav
+      .col-4-xs
+        if locals.prev!=null
+          a(href="#" data-switch-modal=locals.prev) Prev
+        else
+          p!="&nbsp;"
+      .col-4-xs.centered
+        if (locals.url)
+          a(href=locals.url) Visit Site
+            span.url="( " + locals.url + " )"
+      .col-4-xs.right
+        if locals.next!=null
+          a(href="#" data-switch-modal=locals.next) Next
+        else
+          p!="&nbsp;"
+    .row
+      .col-12-xs
+        if locals.modal_thumb
+          .thm
+            img(src="/img/"+locals.modal_thumb)
+        else
+          h2=locals.title
+        h3.title Role
+        p=locals.role
+        h3.title Tech
+        p=locals.tech
+        h3.title Details
+        p=locals.description

@@ -1,7 +1,13 @@
-.portfolio.grid
-  .row.pad
-    each site in locals.sections[0].sites
-      .col-3-m.col-6-xs
-        if site.thumbs
-          .thumb(data-bg="/img/" + site.thumbs[0], data-info=JSON.stringify(site))
-            h3=site.title
+.thumbs.row
+  .col-12-m
+    h2=section.sites_title
+  each site,index in section.sites
+    if section.sites[index-1]
+      - site.prev = index - 1
+    if section.sites[index+1]
+      - site.next = index + 1
+    .col-3-m.col-12-xs
+      if site.thumbs
+        .thumb(data-bg=locals.config.imgPath + site.thumbs[0], data-info=JSON.stringify(site))
+        h3=site.title + " " + index
+        p.tech=site.tech

@@ -1,17 +1,12 @@
-.jobs.grid
-  each job in locals.sections[1].jobs
-    .row
-      .col-12-s
-        h4=job.name
-          span.loc=", " + job.location
-          span.url
-            a(href=job.url)=job.url
-        .job_meta
-          p=job.description
-    each position in job.positions
-      .row.position
-        .col-2-s
-          p.timespan=position.time_span
-        .col-10-s
-          h4=position.title
-          p=position.description
+.row
+  .col-12-s
+    h2=section.jobs_title
+- var count = 0
+while count < section.jobs.length
+  .job.row
+    - var job = section.jobs[count]
+      include ./job-row.pug
+    if (section.jobs[count+1])
+      - var job = section.jobs[count+1];
+      include ./job-row.pug
+    - count = count + 2

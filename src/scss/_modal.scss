@@ -25,12 +25,13 @@
 }
 .modal {
 	margin: 75px auto;
-	padding: 20px;
+	padding: 20px 20px 40px;
 	background: #fff;
 	border: 1px solid #666;
 	width: 60%;
+	left:20%;
 	box-shadow: 0 0 50px rgba(0,0,0,0.5);
-	position: relative;
+	position:fixed;
 	.light & {
 		border-color: #aaa;
 		box-shadow: 0 2px 10px rgba(0,0,0,0.25);
@@ -56,6 +57,7 @@
 		&:hover {
 			opacity: 1;
 		}
+		display:none;
 	}
 	.content {
 		max-height: 400px;

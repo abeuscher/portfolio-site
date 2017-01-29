@@ -1,17 +1,41 @@
+//config
+$cdn-path:"http://cdn.alexbeuscher.com/alexbeuscher.com/";
+$img-path:$cdn-path+"img/";
+$font-path:$cdn-path+"fonts/";
+
 //colors
 $black:#000;
-$off-white:#ecf2f4;
+$off-white:#d2dce6;
+$off-black:#031921;
+$bright-blue:#336699;
+$frog-green:#709864;
+$corn-yellow:#fecc1d;
+$bright-yellow:#fff227;
+$light-green:#d2e6dc;
 
 //$body-bg-color:linear-gradient(#131313 0%,#1c1c1c 20%,#2b2b2b 40%,#111111 60%,#000000 100%);
-$body-bg-color:$off-white;
+$body-bg-color:$frog-green;
 
-$wrapper-bg-color:$black;
+$logo-color-first:$corn-yellow;
+$logo-color-rest:$bright-yellow;
 
-$body-text-color:$black;
-$body-link-color:$black;
+$wrapper-bg-color:$light-green;
+
+$body-text-color:$off-black;
+$body-link-color:$bright-blue;
+
+$header-color:$bright-blue;
 
 //fonts
-$body-font:'Droid Sans',sans-serif;
-$nav-font:'Droid Sans',sans-serif;
-$header-font:'Lato', sans-serif;
+$body-font:'Cabin',sans-serif;
+$nav-font:'Cabin',sans-serif;
+$header-font:'Cabin', sans-serif;
+$logo-font:'Bad Script', sans-serif;
 $header-font-size:1.4em;
+
+//GRID SETTINGS
+$num-cols:12;
+$gutter-width:50px;
+$prefix : "col";
+$bps: (xs: 0, s:640px, m:1024px, l:1320px);
+$susy : ( columns:$num-cols,gutters:1/2,gutter-position:inside);

@@ -1,5 +1,12 @@
 @import "bootstrap";
-
+@mixin list-to-menu($ul-margin:0, $ul-padding:0) {
+	list-style:none;
+	margin:$ul-margin;
+	padding:$ul-padding;
+	li {
+		display:inline-block;
+	}
+}
 @mixin spinner($size: 30px, $thickness: 5px, $speed: 0.75s, $color: gray, $empty-color: transparent) {
 	width: $size;
 	height: $size;
@@ -161,34 +168,31 @@
 	}
 }
 
-@mixin grid($bps:$bps, $prefix: "col", $num-cols: 12, $gutter-width: 0px, $vertical-align: top) {
- 	@for $i from 1 through $num-cols  {
- 		.#{$prefix}-#{$i} {
- 			width: $i / $num-cols * 100%;
-			display:inline-block;
- 		}
- 	}
- 	@each $bp-name, $bp in $bps {
- 		@for $i from 1 through $num-cols  {
- 			.#{$prefix}-#{$i}-#{$bp-name} {
- 				@include bp($bp-name) {
- 					width: $i / $num-cols * 100%;
- 				}
- 			}
- 		}
- 	}
+@mixin grid($bps: $global-bps, $prefix: "col", $num-cols: 12, $gutter-width: 20px, $vertical-align: middle) {
+	@for $i from 1 through $num-cols {
+		.#{$prefix}-#{$i} {
+			width: calc(#{$i / $num-cols * 100%} - #{$gutter-width});
+		}
+	}
+	@each $bp, $val in $bps {
+		@media (min-width: $val) {
+			@for $i from 1 through $num-cols {
+				.#{$prefix}-#{$i}-#{$bp} {
+					width: calc(#{$i / $num-cols * 100%} - #{$gutter-width});
+				}
+			}
+		}
+	}
 
- 	[class*="#{$prefix}-"] {
- 		display: inline-block;
- 		box-sizing: border-box;
- 		padding-right: $gutter-width;
- 		vertical-align: $vertical-align;
-
- 		&:last-of-type, .#{$prefix}-last {
- 			padding-right: 0;
- 		}
- 	}
- }
+	& > [class*="#{$prefix}"] {
+		display: inline-block;
+		margin: $gutter-width / 2;
+		box-sizing: border-box;
+		vertical-align: $vertical-align;
+		position: relative;
+	}
+	margin: -$gutter-width / 2;
+}
 
 @mixin youtube-icon(
 	$size: 50px,

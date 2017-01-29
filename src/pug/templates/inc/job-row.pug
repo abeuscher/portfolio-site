@@ -1,0 +1,11 @@
+.col-6-xs
+  .thumb-bucket
+    img(src=locals.config.imgPath+job.thumb)
+    a.url(href=job.url)=job.url
+  h4=job.name
+  cite=job.location
+  each position in job.positions
+    h5=position.title
+    p.timespan=position.time_span
+  .description
+    p=job.description

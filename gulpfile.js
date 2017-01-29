@@ -120,7 +120,7 @@ gulp.task('bundle-js', bundle);
 
 gulp.task('templates', function() {
   gulp.src(pugSrcDir+'*.pug')
-    .pipe(pug({"pretty":false,"locals":require("./data.json")}))
+    .pipe(pug({"pretty":true,"locals":require("./data.json")}))
     .pipe(gulp.dest(pugBuildDir, {ext: '.html'}));
 });
 gulp.task('move-files', function() {
