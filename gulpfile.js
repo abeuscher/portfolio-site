@@ -8,7 +8,7 @@ var pugSrcDir = srcDir + 'pug/templates/';
 var pugSrcCompDir = srcDir + 'pug/components/';
 var pugBuildDir = buildDir;
 var pugBuildCompDir = jsBuildDir + "components/";
-var miscSrcDir = srcDir + 'public_html/';
+var miscSrcDir = srcDir + 'public_transfer/';
 
 // Include gulp
 var watchify = require('watchify');
