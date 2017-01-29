@@ -5,6 +5,7 @@
       .col-4-xs
         if locals.prev!=null
           a(href="#" data-switch-modal=locals.prev) Prev
+            span.prev
         else
           p!="&nbsp;"
       .col-4-xs.centered
@@ -14,6 +15,7 @@
       .col-4-xs.right
         if locals.next!=null
           a(href="#" data-switch-modal=locals.next) Next
+            span.next
         else
           p!="&nbsp;"
     .row

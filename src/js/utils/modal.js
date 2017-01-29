@@ -34,11 +34,15 @@ var Modal = function(opts) {
     };
     self.close = function() {
       self.el.removeEventListener("click", self.close);
-      document.body.classList.remove(self.opts.bodyClass);
       if (self.el && self.el.parentNode==document.body) {
         document.body.removeChild(self.el);
       }
+      if (document.querySelectorAll(".modal").length <= 0) {
+        document.body.classList.remove(self.opts.bodyClass);
+      }
+
       self.state = "closed";
+      return false;
     };
 
 };

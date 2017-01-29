@@ -12,7 +12,6 @@ window.addEventListener("load", function() {
       forEach(document.querySelectorAll('[data-switch-modal]'), function(el) {
         var index = el.getAttribute("data-switch-modal");
         el.addEventListener("click", function() {
-          console.log(index,modals);
           modals[index].open();
           return false;
         });

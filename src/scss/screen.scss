@@ -138,7 +138,7 @@ body {
 }
 
 header {
-    padding: 80px 0;
+    padding: $gutter-width 0;
     text-align: center;
 
     h1 {
@@ -183,6 +183,7 @@ nav {
 
 footer {
     margin: 100px auto;
+    padding:$gutter-width;
     text-align: center;
 }
 //Content Sections
@@ -249,10 +250,10 @@ footer {
     }
 }
 
-.job {
-    margin-bottom: $gutter-width;
-    padding: 0;
-
+.job {  
+    @include bp(s) {
+      margin-bottom: $gutter-width;
+    }
     h4,
     h5 {
         color: $off-black;
@@ -300,11 +301,22 @@ footer {
 
 .modal {
     .modal-nav {
-      margin-bottom:$gutter-width * 1.5;
       a {
         text-transform:uppercase;
         font-size:.8em;
         font-weight:700;
+        .next, .prev {
+          position:absolute;
+          top:0;
+          width:33%;
+          height:100%;
+        }
+        .next {
+          right:0;
+        }
+        .prev {
+          left:0;
+        }
       }
 
       .url {
@@ -316,12 +328,13 @@ footer {
     h2 {
         text-align: center;
         font-size: 2em;
+        padding:$gutter-width 0;
     }
 
     .thm {
         display: block;
         text-align: center;
-
+        padding:$gutter-width 0;
         img {
             max-width: 100%;
         }
