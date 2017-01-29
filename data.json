@@ -1,6 +1,6 @@
 {
     "config": {
-        "imgPath":"http://cdn.alexbeuscher.com/alexbeuscher.com/img/"
+        "imgPath": "http://cdn.alexbeuscher.com/alexbeuscher.com/img/"
     },
     "meta": {
         "title": "Alex Beuscher : Resume and Portfolio",
@@ -32,7 +32,7 @@
         "legal": "© Alex Beuscher 2017. All Rights Reserved, more or less."
     },
     "sections": [{
-        "title":"overview",
+        "title": "overview",
         "intro_header": "Overview",
         "intro": "My name is Al and I build websites. I most recently worked at 2K Games as Senior Web Developer and am currently seeking employment in a development or managerial role. I have eighteen years of experience working on the web, and have worked in organizations of all sizes. My recent focus has been in front end work but I have a strong familiarity with linux servers, web security, and php frameworks. I have delivered web applications with large front and back end components. If you have contract work or require any web consulting, I am happy to provide those services as well, and have served individual clients intermittently throughout my career. I make strong contributions to teams I work on, and I know how to deliver on time.",
         "skills_header": "Skills",
@@ -91,7 +91,7 @@
             "title": "Jade/Pug",
             "level": 3
         }]
-      },{
+    }, {
         "title": "portfolio",
         "sites_title": "Case Studies",
         "sites": [{
@@ -101,7 +101,7 @@
             "tech": "Expression Engine, Tellemetry, Localization",
             "description": "This site was built using Expression Engine. News was imported to the site from a central CMS, where localized content was provided by editors in multiple locations. The site also feature a telemtry piece, which is a javascript application which surfaces data from a REST API provided to us by the developer, Firaxis Games.",
             "url": "https://www.xcom.com",
-            "modal_thumb" : "thm-xcom-modal.jpg"
+            "modal_thumb": "thm-xcom-modal.jpg"
         }, {
             "title": "WWE 2K",
             "thumbs": ["thm-wwe-desktop.jpg", "thm-wwe-mobile.jpg"],
@@ -109,7 +109,7 @@
             "tech": "Expression Engine, Localization, Oauth",
             "description": "This site was built using Expression Engine, with a centralized CMS. In its iteration, WWE 2K has become a sophisticated site. As we grew to understand the brand and audience and streamline our own processes, we were better able to serve the need. Introducing third party developers into a secure, distributed environment was an ongoing challenge while at 2K. We worked to incorporate a third party promotional web application with the site in its most recent year, where visitors could participate in a small web game which encouraged sign up for My2K, a customer loyalty program.",
             "url": "https://wwe.2k.com/",
-            "modal_thumb" : "thm-wwe-modal.jpg"
+            "modal_thumb": "thm-wwe-modal.jpg"
         }, {
             "title": "WWE 2K Logo Uploader",
             "thumbs": ["thm-uploader-desktop.jpg"],
@@ -117,7 +117,7 @@
             "tech": "PHP, Rest API, Memcache, Oauth",
             "description": "This site was built to interface with the in-game experience of WWE 2K. Players may upload and manage their in game images from the site. This was a front end application built in javascript with a php component, connecting to a REST API endpoint provided through a third party. The interior design of the application was skinned to match the in game experience.",
             "url": "https://wwe.2k.com/wwe2k17logo/",
-            "modal_thumb" : "thm-wwe-modal.jpg"
+            "modal_thumb": "thm-wwe-modal.jpg"
         }, {
             "title": "Borderlands",
             "thumbs": ["thm-borderlands-desktop.jpg", "thm-borderlands-mobile.jpg"],
@@ -125,7 +125,7 @@
             "tech": "Expression Engine, Localization, Social Media API",
             "description": "Borderlands is a large, well known franchise. The challenge here was in creating a visual spectacle with the site to showcase the franchise's unique look and feel. Also, with a large amount of DLC, the relationships between various products and package deals was a taxonomical challenge. With a localized site, content spaces with so much imagery had to be carefully designed to be flexible to fit differently sized strings. Additionally, the site features social media API interaction and a Skill Tree calculator web application.",
             "url": "https://www.borderlandsthegame.com/",
-            "modal_thumb" : "thm-borderlands-modal.jpg"
+            "modal_thumb": "thm-borderlands-modal.jpg"
         }, {
             "title": "Hangar 13 Games",
             "thumbs": ["thm-hangar13-desktop.jpg", "thm-hangar13-mobile.jpg"],
@@ -133,7 +133,7 @@
             "tech": "Static Generated, Continuous Deployment, Rest API based CMS, Jade/Pug",
             "description": "This is a small site for one of 2k's Game Developers. It is fed by a centralized CMS, and statically generated under continuous deploy using TeamCity as the build agent. With smaller clients, there is often a problem of throughput. In this case, the studio's active social media activity to keep their site in the moment, along with relevant aggregated news from mafiagame.com, which showcases the studios current offering, Mafia 3. By organizing the content in chronological order from most recent, returning visitors are given content to engage with the studio on, with very little additional input from their team.",
             "url": "https://hangar13games.com/",
-            "modal_thumb" : "thm-hangar13-modal.jpg"
+            "modal_thumb": "thm-hangar13-modal.jpg"
         }, {
             "title": "2K Support",
             "thumbs": ["thm-support-desktop.jpg", "thm-support-mobile.jpg"],

@@ -250,7 +250,7 @@ footer {
     }
 }
 
-.job {  
+.job {
     @include bp(s) {
       margin-bottom: $gutter-width;
     }
@@ -298,7 +298,9 @@ footer {
         }
     }
 }
-
+.pdf_link {
+  float:right;
+}
 .modal {
     .modal-nav {
       a {
