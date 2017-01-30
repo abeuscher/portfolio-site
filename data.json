@@ -3,14 +3,16 @@
         "imgPath": "http://cdn.alexbeuscher.com/alexbeuscher.com/img/"
     },
     "meta": {
-        "title": "Alex Beuscher : Resume and Portfolio",
+        "title": "Alex Beuscher : Portfolio and Resume",
         "author": "Alex Beuscher",
         "description": "Alex Beuscher is a web developer living in Alameda, CA. He has most recently worked at 2K Games in Novato, CA and is seeking new employment opportunities.",
-        "keywords": "front end developer, web development alameda"
+        "keywords": "front end developer, web development alameda",
+        "site_url" : "alexbeuscher.com",
+        "site_thumb" : "thm-self.jpg"
     },
     "header": {
         "name": "<span class='dark'>A</span>lex <span class='dark'>B</span>euscher",
-        "site_title": "Resume & Portfolio",
+        "site_title": "Portfolio & Resume",
         "nav": [{
             "text": "",
             "class": "icon-github",

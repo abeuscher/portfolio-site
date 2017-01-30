@@ -195,7 +195,7 @@ footer {
     ul.skills {
         display: flex;
         flex-wrap: wrap;
-        margin: $gutter-width/2 0 0;
+        margin: 0;
         padding: 0;
         vertical-align: top;
 
@@ -228,8 +228,6 @@ footer {
 }
 
 .thumbs {
-    margin-bottom: $gutter-width;
-
     .thumb {
         @include aspect-ratio(640,394);
         cursor: pointer;
@@ -325,6 +323,7 @@ footer {
         display:block;
         text-transform:none;
         font-size:.75em;
+        line-height:$gutter-width;
       }
     }
     h2 {

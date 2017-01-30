@@ -1,14 +1,16 @@
-.thumbs.row
-  .col-12-m
-    h2=section.sites_title
-  each site,index in section.sites
-    - site.imgPath = locals.config.imgPath
-    if section.sites[index-1]
-      - site.prev = index - 1
-    if section.sites[index+1]
-      - site.next = index + 1
-    .col-3-m.col-12-xs
-      if site.thumbs
-        .thumb(data-bg=locals.config.imgPath + site.thumbs[0], data-info=JSON.stringify(site))
-        h3=site.title
-        p.tech=site.tech
+- var count = 0, perRow = 4;
+while count < section.sites.length
+  if count/perRow == parseInt(count/perRow)
+    .row.thumbs
+      - var i = count;
+      while i < count * perRow + perRow
+        - var site = section.sites[i]
+        if site
+          - site.config = locals.config
+          if i>0
+            - site.prev = i - 1
+          if i<section.sites.length-1
+            - site.next = i + 1
+          include ./portfolio-row.pug
+        - i++
+  - count = count+4
