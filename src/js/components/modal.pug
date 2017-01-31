@@ -23,9 +23,17 @@
         .col-12-xs
           if locals.modal_thumb
             .thm
-              img(src=locals.config.imgPath+locals.modal_thumb)
+              if (locals.url)
+                a(href=locals.url)
+                  img(src=locals.config.imgPath+locals.modal_thumb)
+              else
+                img(src=locals.config.imgPath+locals.modal_thumb)
           else
-            h2=locals.title
+            if (locals.url)
+              a(href=locals.url)
+                h2=locals.title
+            else
+              h2=locals.title
           h3.title Role
           p=locals.role
           h3.title Tech
