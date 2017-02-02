@@ -1,6 +1,6 @@
 {
   "name": "alexbeuscher-com",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Resume and Portfolio site for Alex Beuscher",
   "main": "gulpfile.js",
   "scripts": {
