@@ -2,7 +2,7 @@
 @import "./_variables.scss";
 @import "./_global.scss";
 @import "./_sass-mixins.scss";
-@import "./_modal.scss";
+@import "./_modal-new.scss";
 @import "./_icons.scss";
 @import '../../node_modules/susy/sass/_susy.scss';
 //Basic Structure
@@ -306,16 +306,7 @@ footer {
         font-size:.8em;
         font-weight:700;
         .next, .prev {
-          position:absolute;
-          top:0;
-          width:33%;
-          height:100%;
-        }
-        .next {
-          right:0;
-        }
-        .prev {
-          left:0;
+          padding:1em;
         }
       }
 

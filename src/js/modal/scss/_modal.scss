@@ -1,0 +1,66 @@
+/*
+  Modal Overlay
+*/
+.modal-overlay {
+  background:rgba(0,0,0,.8);
+  height: 100%;
+  left: 0;
+  display: flex;
+  overflow: auto;
+  padding: 1.5em;
+  position: fixed;
+  top: 0;
+  transition: opacity .2s;
+  width: 100%;
+  z-index: -1;
+  &:focus {
+    outline:0;
+  }
+  &[aria-hidden="true"] {
+    opacity: 0;
+    visibility: hidden;
+  }
+  &[aria-hidden="false"] {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+  }
+}
+
+.modal {
+  background: #fff;
+  margin: auto;
+  max-width: 1280px;
+  overflow: auto;
+  overflow-x: hidden;
+  padding: 1.5em;
+  position: relative;
+  transform: scale(.8);
+  transition: transform .3s;
+  width: 90%;
+  .btn-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size:5em;
+    line-height: .5;
+    padding: 0;
+    position: absolute;
+    right: $gutter-width/2;
+    top: $gutter-width/3;
+    z-index: 2;
+  }
+}
+
+.modal-overlay[aria-hidden="false"] .modal {
+  transform: scale(1);
+}
+
+
+.btn-close:hover {
+  color: #c12f48;
+}
+
+.btn-close:focus {
+  outline: 1px dotted;
+}
