@@ -1,34 +1,45 @@
-.modal-overlay
-  .modal
-    .inner
-      a.close &times;
-      .row.modal-nav
-        .col-4-xs
-          if locals.prev!=null
-            a(href="#" data-switch-modal=locals.prev) Prev
-              span.prev
-          else
-            p!="&nbsp;"
-        .col-4-xs.centered
-          if (locals.url)
-            a(href=locals.url) Visit Site
-              span.url=locals.url
-        .col-4-xs.right
-          if locals.next!=null
-            a(href="#" data-switch-modal=locals.next) Next
-              span.next
-          else
-            p!="&nbsp;"
-      .row
-        .col-12-xs
-          if locals.modal_thumb
-            .thm
+.modal
+  .inner
+    a.btn-close &times;
+    .row
+      .col-12-xs
+        if locals.modal_thumb
+          .thm
+            if (locals.url)
+              a(href=locals.url)
+                img(src=locals.config.imgPath+locals.modal_thumb)
+                h3=locals.title
+            else
               img(src=locals.config.imgPath+locals.modal_thumb)
+              h3=locals.title
+        else
+          if (locals.url)
+            a(href=locals.url)
+              h2=locals.title
           else
             h2=locals.title
-          h3.title Role
-          p=locals.role
-          h3.title Tech
-          p=locals.tech
-          h3.title Details
-          p=locals.description
+    .row.modal-nav
+      .col-4-xs
+        if locals.prev!=null
+          a(href="#" data-switch-modal=locals.prev) Prev
+            span.prev
+        else
+          p!="&nbsp;"
+      .col-4-xs.centered
+        if (locals.url)
+          a(href=locals.url) Visit Site
+            span.url=locals.url
+      .col-4-xs.right
+        if locals.next!=null
+          a(href="#" data-switch-modal=locals.next) Next
+            span.next
+        else
+          p!="&nbsp;"
+    .row
+      .col-12-s
+        h3.title Role
+        p=locals.role
+        h3.title Tech
+        p=locals.tech
+        h3.title Details
+        p=locals.description

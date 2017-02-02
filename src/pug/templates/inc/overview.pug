@@ -7,12 +7,3 @@
         li
           .skill-box
             p=skill.title
-            .stars
-              - var n = 0
-              while n < skill.level
-                span.icon-checkmark
-                - n++
-              - var n = 0
-              while n < 3 - skill.level
-                span.icon-checkmark2
-                - n++

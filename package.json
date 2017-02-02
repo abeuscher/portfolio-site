@@ -1,6 +1,6 @@
 {
   "name": "alexbeuscher-com",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Resume and Portfolio site for Alex Beuscher",
   "main": "gulpfile.js",
   "scripts": {
@@ -15,6 +15,7 @@
     "browserify-shim": "^3.8.8",
     "del": "^1.2.0",
     "es6-promise": "^3.0.2",
+    "event-emitter": "0.3.4",
     "factor-bundle": "^2.5.0",
     "fs": "0.0.2",
     "gulp": "^3.9.0",
