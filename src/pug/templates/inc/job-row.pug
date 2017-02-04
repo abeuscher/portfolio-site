@@ -1,7 +1,12 @@
 .col-6-s
   .thumb-bucket
-    img(src=locals.config.imgPath+job.thumb)
-    a.url(href=job.url)=job.url
+    if job.url
+      a.url(href="http://"+job.url)
+        img(src=locals.config.imgPath+job.thumb)
+      a.url(href="http://"+job.url)=job.url
+    else
+      img(src=locals.config.imgPath+job.thumb)
+      a.url!="&nbsp;"
   h4=job.name
   cite=job.location
   each position in job.positions
