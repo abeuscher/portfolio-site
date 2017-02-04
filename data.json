@@ -8,7 +8,7 @@
         "description": "Alex Beuscher is a web developer living in Alameda, CA. He has most recently worked at 2K Games in Novato, CA and is seeking new employment opportunities.",
         "keywords": "front end developer, web development alameda",
         "site_url" : "alexbeuscher.com",
-        "site_thumb" : "thm-self.jpg"
+        "site_thumb" : "al_pic-lg.jpg"
     },
     "header": {
         "name": "<span class='dark'>A</span>lex <span class='dark'>B</span>euscher",
@@ -100,7 +100,7 @@
             "title": "XCOM",
             "thumbs": ["thm-xcom-desktop.jpg", "thm-xcom-mobile.jpg"],
             "role": "Developer",
-            "tech": "Expression Engine, Tellemetry, Localization",
+            "tech": "Expression Engine, Telemetry, Localization",
             "description": "This site was built using Expression Engine. News was imported to the site from a central CMS, where localized content was provided by editors in multiple locations. The site also feature a telemtry piece, which is a javascript application which surfaces data from a REST API provided to us by the developer, Firaxis Games.",
             "url": "https://www.xcom.com",
             "modal_thumb": "thm-xcom-modal.jpg"

@@ -36,6 +36,8 @@ html(lang="en")
     link(href="https://fonts.googleapis.com/css?family=Cabin:400,700|Bad+Script:400,700",type="text/css",rel="stylesheet")
     link(href="/css/screen.css",type="text/css",rel="stylesheet")
   body
+    #hidden-thumb
+      img(src=locals.config.imgPath+locals.meta.site_thumb,alt="")
     #top-nav
       ul
         each item in locals.header.contact

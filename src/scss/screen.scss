@@ -102,6 +102,10 @@ body {
         }
     }
 }
+//Hide first image to be scraped by weird scrapers.
+#hidden-thumb {
+  display:none;  
+}
 //Nav, Header, and Footer
 #top-nav {
     background: url(#{$img-path + "bg-header.jpg"}) no-repeat center top;
