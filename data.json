@@ -101,7 +101,7 @@
             "thumbs": ["thm-xcom-desktop.jpg", "thm-xcom-mobile.jpg"],
             "role": "Developer",
             "tech": "Expression Engine, Telemetry, Localization",
-            "description": "This site was built using Expression Engine. News was imported to the site from a central CMS, where localized content was provided by editors in multiple locations. The site also feature a telemtry piece, which is a javascript application which surfaces data from a REST API provided to us by the developer, Firaxis Games.",
+            "description": "This site was built using Expression Engine. News was imported to the site from a central CMS, where localized content was provided by editors in multiple locations. The site also feature a telemtry piece, which is a javascript application which surfaces data from a REST API provided to us by the developer, Firaxis Games. It is written in Vanilla JS, with portions of the API interaction written in PHP to make an oAuth connection and cache data over intervals from the API to limit requests.",
             "url": "https://www.xcom.com",
             "modal_thumb": "thm-xcom-modal.jpg"
         }, {
@@ -109,7 +109,7 @@
             "thumbs": ["thm-wwe-desktop.jpg", "thm-wwe-mobile.jpg"],
             "role": "Developer",
             "tech": "Expression Engine, Localization, Oauth",
-            "description": "This site was built using Expression Engine, with a centralized CMS. In its iteration, WWE 2K has become a sophisticated site. As we grew to understand the brand and audience and streamline our own processes, we were better able to serve the need. Introducing third party developers into a secure, distributed environment was an ongoing challenge while at 2K. We worked to incorporate a third party promotional web application with the site in its most recent year, where visitors could participate in a small web game which encouraged sign up for My2K, a customer loyalty program.",
+            "description": "In its iteration, WWE 2K has become a sophisticated site. As we grew to understand the brand and audience and streamline our own processes, we were better able to serve the need. This site was constructed using Expression Engine, with a centralized CMS. The challenge of introducing third party developers into a secure, distributed environment was ongoing at 2k. We worked to incorporate a third party promotional web application with the WWE site in its most recent year, where visitors could participate in a small web game which encouraged sign up for My2K, a customer loyalty program. This program performed well with customers, bringing our audience a reason to return.",
             "url": "https://wwe.2k.com/",
             "modal_thumb": "thm-wwe-modal.jpg"
         }, {

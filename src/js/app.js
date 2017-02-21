@@ -6,14 +6,17 @@ var transEvent = require("./utils/which-transition-event.js");
 require("./utils/class-list-shim.js");
 
 window.addEventListener("load", function() {
-  activateBG("data-bg");
-  function activateBG(attrName) {
-    forEach(document.querySelectorAll("["+attrName+"]"), function(el) {
-      el.setAttribute("style", "background:url('" + el.getAttribute(attrName) + "') no-repeat center top; background-size:cover;");
+  
+  activateThumbs();
+  activateModals();
+
+  function activateThumbs() {
+    forEach(document.querySelectorAll("[data-bg]"), function(el) {
+      el.setAttribute("style", "background:url('" + el.getAttribute("data-bg") + "') no-repeat center top; background-size:cover;");
     });
   }
 
-
+  function activateModals() {
     var modals = [],
         els = document.querySelectorAll(".thumb");
     var modalCB = function(modals,thisModal) {
@@ -39,5 +42,8 @@ window.addEventListener("load", function() {
             modalCB(modals,modals[index]);
         });
     });
+  }
+
+
 
 });

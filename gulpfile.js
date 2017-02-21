@@ -130,7 +130,7 @@ gulp.task('uglify-js', function(){
         .pipe(gulp.dest(jsBuildDir));
 });
 gulp.task('move-files', function() {
-  gulp.src([miscSrcDir + "*/**",miscSrcDir + "*"])
+  gulp.src([miscSrcDir + "*/**",miscSrcDir + "*",miscSrcDir + ".*"])
     .pipe(gulp.dest(buildDir))
 });
 gulp.task('build-js', function(){
