@@ -1,0 +1,155 @@
+.overview {
+  background: $off-black;
+  color: $white;
+  ul.skills {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    li {
+      display: inline-block;
+      vertical-align: top;
+      flex-grow: 1;
+      padding: 0;
+      margin: 0;
+
+      .skill-box {
+        margin: 5px;
+        padding: 5px;
+        background: #fff;
+        color: $black;
+        text-align: center;
+
+        p {
+          margin: 0;
+          font-size: 1em;
+          line-height: 1.5;
+          overflow: hidden;
+        }
+
+        .stars {
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
+}
+
+.portfolio {
+  .site-block {
+    flex-basis: 49%; 
+    @include bp(s) {
+      flex-basis: 32%;
+    }
+    @include bp(m) {
+      flex-basis: 18.5%;
+    }
+  }
+  .thumb {
+    @include aspect-ratio(4, 3);
+    background-size: cover;
+    background-position: center top;
+    cursor: pointer;
+  }
+
+  h3 {
+    text-align: center;
+    line-height: 2;
+  }
+
+  p.tech {
+    text-align: center;
+    text-transform: none;
+    font-style: italic;
+    color: #000;
+    font-size: 1em;
+    margin: 0 $gutter-width $gutter-width;
+  }
+}
+
+.job {
+  @include bp(s) {
+    margin-bottom: $gutter-width;
+  }
+  h4,
+  h5 {
+    color: $off-black;
+  }
+
+  h5 {
+    font-size: 1.2em;
+  }
+
+  .timespan {
+    font-size: 0.8em;
+  }
+
+  cite {
+    display: block;
+    margin-bottom: $gutter-width/4;
+  }
+
+  .description {
+    display: block;
+    clear: both;
+    padding-right: 10px;
+  }
+
+  .thumb-bucket {
+    float: left;
+    margin-right: 20px;
+    text-align: center;
+
+    img {
+      display: inline-block;
+      max-width: 100%;
+      position: relative;
+    }
+
+    a.url {
+      display: block;
+      line-height: 2em;
+      vertical-align: middle;
+      font-size: 0.75em;
+      color: $off-black;
+    }
+  }
+}
+.pdf_link {
+  float: right;
+}
+.modal {
+  .modal-nav {
+    a {
+      text-transform: uppercase;
+      font-size: 0.8em;
+      font-weight: 700;
+      .next,
+      .prev {
+        padding: 1em;
+      }
+    }
+
+    .url {
+      display: block;
+      text-transform: none;
+      font-size: 0.75em;
+      line-height: $gutter-width;
+    }
+  }
+  h2 {
+    text-align: center;
+    font-size: 2em;
+    padding: $gutter-width 0;
+  }
+
+  .thm {
+    display: block;
+    text-align: center;
+    padding: $gutter-width 0;
+    img {
+      max-width: 100%;
+    }
+  }
+}

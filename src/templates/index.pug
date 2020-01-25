@@ -1,70 +1,40 @@
-doctype html
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
-    title=locals.meta.title
-    meta(name="author",content=locals.meta.author)
-    meta(name="description",content=locals.meta.description)
-    meta(name="keywords",content=locals.meta.keywords)
-    meta(property="og:type",content="website")
-    meta(property="og:url",content=locals.meta.site_url)
-    meta(property="og:title",content=locals.meta.title)
-    meta(property="og:image",content=locals.config.imgPath+locals.meta.site_thumb)
-    meta(property="og:description",content=locals.meta.description)
-    meta(name="twitter:title",content=locals.meta.title)
-    meta(name="twitter:description",content=locals.meta.description)
-    meta(name="twitter:image",content=locals.config.imgPath+locals.meta.site_thumb)
-    meta(name="twitter:card",content="summary_large_image")
-    meta(name="twitter:site",content=locals.meta.site_url)
-    link(rel="apple-touch-icon",sizes="57x57",href="/icons/apple-icon-57x57.png")
-    link(rel="apple-touch-icon",sizes="60x60",href="/icons/apple-icon-60x60.png")
-    link(rel="apple-touch-icon",sizes="72x72",href="/icons/apple-icon-72x72.png")
-    link(rel="apple-touch-icon",sizes="76x76" href="/icons/apple-icon-76x76.png")
-    link(rel="apple-touch-icon",sizes="114x114",href="/icons/apple-icon-114x114.png")
-    link(rel="apple-touch-icon",sizes="120x120",href="/icons/apple-icon-120x120.png")
-    link(rel="apple-touch-icon",sizes="144x144",href="/icons/apple-icon-144x144.png")
-    link(rel="apple-touch-icon",sizes="152x152",href="/icons/apple-icon-152x152.png")
-    link(rel="apple-touch-icon",sizes="180x180",href="/icons/apple-icon-180x180.png")
-    link(rel="icon",type="image/png",sizes="192x192",href="/icons/android-icon-192x192.png")
-    link(rel="icon",type="image/png",sizes="32x32",href="/icons/favicon-32x32.png")
-    link(rel="icon",type="image/png",sizes="96x96",href="/icons/favicon-96x96.png")
-    link(rel="icon",type="image/png",sizes="16x16",href="/icons/favicon-16x16.png")
-    meta(name="msapplication-TileColor",content="#ffffff")
-    meta(name="msapplication-TileImage",content="/icons/ms-icon-144x144.png")
-    meta(name="theme-color",content="#ffffff")
-    link(href="https://fonts.googleapis.com/css?family=Cabin:400,700|Bad+Script:400,700",type="text/css",rel="stylesheet")
-    link(href="css/screen.css",type="text/css",rel="stylesheet")
-  body
-    #hidden-thumb
-      img(src=locals.config.imgPath+locals.meta.site_thumb,alt="")
-    #top-nav
-      ul
-        each item in locals.header.contact
-          li
-            a(href=item.url)=item.text
-        each item in locals.header.nav
-          li
-            a(href=item.url,class=item.class)=item.text
-    include inc/header.pug
-    #wrapper-main
-      .inner
-        each section in locals.sections
-          section.content(id=section.title)
-            if section.title=="overview"
-              include inc/overview.pug
-            if section.title=="resume"
-              include inc/jobs.pug
-            if section.title=="portfolio"
-              include inc/portfolio.pug
-    footer
-      p=locals.footer.legal
-    script(src='js/bundle.js')
-    script.
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+extends ./inc/page.pug
 
-      ga('create', 'UA-25857481-1', 'auto');
-      ga('send', 'pageview');
+block content
+  section.overview
+    .inner.padding-both.flex
+      .col-two-third
+        p=locals.overview.intro
+      .col-third
+        ul.skills
+          each skill in locals.overview.skills
+            li
+              .skill-box
+                p=skill.title
+  section.portfolio
+    .inner.flex.padding-all
+      each site in locals.portfolio.sites
+        .site-block
+          if site.thumbs
+            .thumb(data-bg=locals.config.imgPath + site.thumbs[0], data-info=JSON.stringify(site))
+            h3=site.title
+            p.tech=site.tech
+  section.resume
+    .inner
+      each job in locals.resume.jobs
+        .job-block
+            .thumb-bucket
+              if job.url
+                a.url(href="http://"+job.url)
+                  img(src=locals.config.imgPath+job.thumb)
+                a.url(href="http://"+job.url)=job.url
+              else
+                img(src=locals.config.imgPath+job.thumb)
+                a.url!="&nbsp;"
+            h4=job.name
+            cite=job.location
+            each position in job.positions
+              h5=position.title
+              p.timespan=position.time_span
+            .description
+              p=job.description
