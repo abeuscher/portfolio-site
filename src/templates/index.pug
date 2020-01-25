@@ -12,29 +12,37 @@ block content
               .skill-box
                 p=skill.title
   section.portfolio
-    .inner.flex.padding-all
-      each site in locals.portfolio.sites
-        .site-block
-          if site.thumbs
-            .thumb(data-bg=locals.config.imgPath + site.thumbs[0], data-info=JSON.stringify(site))
+    .inner.flex.padding-both
+      each site,idx in locals.portfolio.sites
+        - var className = idx > 3 ? "hide more-less" : "";
+        
+
+        if site.thumbs
+          .site-block(class=className, data-info=JSON.stringify(site))
+            .thumb(data-bg=locals.config.imgPath + site.thumbs[0])
             h3=site.title
             p.tech=site.tech
+    .inner.centered.padding-bottom
+      a.button.btn-more-less(href="#") more
   section.resume
-    .inner
-      each job in locals.resume.jobs
-        .job-block
+    .inner.padding-top
+      each job,idx in locals.resume.jobs
+        - var className = idx > 3 ? "hide more-less" : "";
+        .job-block.flex(class=className)
+          .col-third
             .thumb-bucket
               if job.url
-                a.url(href="http://"+job.url)
-                  img(src=locals.config.imgPath+job.thumb)
-                a.url(href="http://"+job.url)=job.url
+                a(href="http://"+job.url)
+                  .thumb(data-bg=locals.config.imgPath+job.thumb)
               else
-                img(src=locals.config.imgPath+job.thumb)
-                a.url!="&nbsp;"
+                .thumb(data-bg=locals.config.imgPath+job.thumb)
             h4=job.name
             cite=job.location
             each position in job.positions
               h5=position.title
               p.timespan=position.time_span
+          .col-two-third
             .description
               p=job.description
+    .inner.centered.padding-bottom
+      a.button.btn-more-less(href="#") more

@@ -1,79 +1,83 @@
 //Hide first image to be scraped by weird scrapers.
 #hidden-thumb {
-    display:none;  
-  }
-  //Nav, Header, and Footer
-  #top-nav {
-      background: $black;
-      width: 100%;
-      color: #fff;
-      background-size: cover;
-      text-align: center;
-  
-      ul {
-          @include list-to-menu();
-          display: inline-block;
-  
-          li {
-              padding: 0 0.25em;
-              margin: 0;
-              @include bp(s) {
-                  padding: 0 1em;
-              }
-  
-              a {
-                  display: block;
-                  font-size: 0.8em;
-                  line-height: $gutter-width;
-                  color: #fff;
-                  transition: 0.25s text-shadow ease-in;
-                  text-shadow: -1px 1px 5px #000;
-  
-                  &:hover {
-                      text-shadow: -1px 1px 10px #000;
-                  }
-              }
-          }
+  display: none;
+}
+//Nav, Header, and Footer
+#top-nav {
+  background: $header-bg;
+  width: 100%;
+  color: $header-text-color;
+  background-size: cover;
+  text-align: center;
+  padding: $gutter-width/2 0;
+  ul {
+    @include list-to-menu();
+    display: inline-block;
+
+    li {
+      padding: 0 0.25em;
+      margin: 0;
+      @include bp(s) {
+        padding: 0 1em;
       }
+
+      a {
+        display: block;
+        font-size: 0.8em;
+        line-height: $gutter-width;
+        color: $nav-link-color;
+        transition: 0.25s text-shadow ease-in;
+        text-shadow: -1px 1px 5px #000;
+
+        &:hover {
+          text-shadow: -1px 1px 10px #000;
+          color: $turquoise;
+        }
+      }
+    }
   }
+}
 
 header {
-    padding: $gutter-width 0;
-    text-align: center;
-
-    h1 {
-        font-family: $logo-font;
-        color: $logo-color;
-        font-size: 1.5em;
-        @include bp(m) {
-            font-size: 5em; 
-        }
+  padding: $gutter-width 0;
+  text-align: center;
+  h1,
+  h2 {
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5);
+  }
+  h1 {
+    font-family: $logo-font;
+    color: $logo-color;
+    font-size: 1.5em;
+    @include bp(m) {
+      font-size: 5em;
     }
+  }
 
-    h2 {
-        font-size: 1.25em;
-        font-family: $body-font;
-        color: $logo-color;
-        @include bp(m) {
-            font-size: 2em;
-        }
+  h2 {
+    font-size: 1.25em;
+    font-family: $body-font;
+    color: $logo-color;
+    @include bp(m) {
+      font-size: 2em;
     }
+  }
 
-    .contact {
-        display: inline-block;
-        margin: 0.8em 0.5em;
-    }
+  .contact {
+    display: inline-block;
+    margin: 0.8em 0.5em;
+  }
 }
 
 nav {
-    ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
-        li {
-            display: inline-block;
-            padding-right: 20px;
-        }
+    li {
+      display: inline-block;
+      padding-right: 20px;
     }
+  }
 }

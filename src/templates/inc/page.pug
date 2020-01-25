@@ -28,6 +28,9 @@ html(lang="en")
   body
     #hidden-thumb
       img(src=locals.config.imgPath+locals.meta.site_thumb,alt="")
+    header
+        h1!=locals.header.name
+        h2=locals.header.site_title
     #top-nav
       ul
         each item in locals.header.contact
@@ -35,12 +38,8 @@ html(lang="en")
             a(href=item.url)=item.text
         each item in locals.header.nav
           li
-            a(href=item.url,class=item.class)=item.text
-    header
-        h1!=locals.header.name
-        h2=locals.header.site_title
-    #wrapper-main
-        block content
+            a(href=item.url,class=item.class)=item.text        
+    block content
     footer
       p=locals.footer.legal
     script(src='js/bundle.js')

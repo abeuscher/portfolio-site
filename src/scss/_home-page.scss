@@ -1,6 +1,8 @@
 .overview {
-  background: $off-black;
-  color: $white;
+  background: $blue-gray;
+  p {
+    margin: 0;
+  }
   ul.skills {
     display: flex;
     flex-wrap: wrap;
@@ -22,8 +24,7 @@
         text-align: center;
 
         p {
-          margin: 0;
-          font-size: 1em;
+          font-size: .8em;
           line-height: 1.5;
           overflow: hidden;
         }
@@ -37,76 +38,94 @@
 }
 
 .portfolio {
-  .site-block {
-    flex-basis: 49%; 
-    @include bp(s) {
-      flex-basis: 32%;
-    }
-    @include bp(m) {
-      flex-basis: 18.5%;
-    }
-  }
-  .thumb {
-    @include aspect-ratio(4, 3);
-    background-size: cover;
-    background-position: center top;
-    cursor: pointer;
-  }
+  background: $turquoise;
 
+  .thumb {
+    @include aspect-ratio(640, 400);
+    background-size: 110%;
+    background-position: center center;
+    filter: grayscale(80%);
+  }
+  p.tech, h3 {
+    color: darken($grayish,5%);
+  }
   h3 {
+    padding-top: $gutter-width/3;
     text-align: center;
-    line-height: 2;
   }
 
   p.tech {
     text-align: center;
     text-transform: none;
     font-style: italic;
-    color: #000;
     font-size: 1em;
-    margin: 0 $gutter-width $gutter-width;
+  }
+  .site-block {
+    flex-basis: 100%;
+    cursor: pointer;
+    * {
+    transition:all .2s ease-in;  
+    }
+    @include bp(s) {
+      flex-basis: 32%;
+    }
+    @include bp(m) {
+      flex-basis: 23.5%;
+    }
+    &:hover {
+      p.tech, h3 {
+        color: darken($grayish,10%);
+      }
+      
+      .thumb {
+        filter: grayscale(0%) blur(0);
+        background-size: 100%;
+      }
+    }
   }
 }
-
-.job {
-  @include bp(s) {
-    margin-bottom: $gutter-width;
-  }
+.resume {
+  background: $blue-gray;
+  //color:$white;
+  h2,
+  h3,
   h4,
   h5 {
-    color: $off-black;
+    //color:$white;
   }
-
+}
+.job-block {
+  position: relative;
+  h4 {
+    margin-top: $gutter-width/4;
+    font-size: 1.4em;
+  }
   h5 {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
-
-  .timespan {
-    font-size: 0.8em;
+  .description {
+    padding-top: 3px;
   }
-
   cite {
     display: block;
-    margin-bottom: $gutter-width/4;
+    margin-bottom: $gutter-width/2;
   }
-
-  .description {
-    display: block;
-    clear: both;
-    padding-right: 10px;
+  .col-third p {
+    font-size: 0.9em;
   }
-
   .thumb-bucket {
-    float: left;
-    margin-right: 20px;
+    display: none;
     text-align: center;
-
-    img {
+    a {
       display: inline-block;
-      max-width: 100%;
-      position: relative;
     }
-
+    .thumb {
+      background-size: 80%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      padding: 25px;
+      display: inline-block;
+    }
     a.url {
       display: block;
       line-height: 2em;
@@ -114,6 +133,17 @@
       font-size: 0.75em;
       color: $off-black;
     }
+  }
+  @include bp(s) {
+    margin-bottom: $gutter-width;
+    .col-third {
+      text-align: right;
+    }
+    .thumb-bucket {
+      text-align: right;
+    }
+  }
+  @include bp(m) {
   }
 }
 .pdf_link {

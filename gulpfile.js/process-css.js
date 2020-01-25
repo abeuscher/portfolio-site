@@ -3,6 +3,7 @@ var settings = require("../settings.js")();
 var sass = require('gulp-sass');
 var cssmin = require('gulp-cssmin');
 var autoprefixer = require('gulp-autoprefixer');
+var wait = require("gulp-wait");
 
 const { src, dest, watch } = require('gulp');
 
@@ -27,6 +28,7 @@ function triggerCss(path, stats) {
 function buildCss(s) {
   console.log("Processing Style sheet group " + s.name)
   src(s.srcDir + '*.scss')
+  .pipe(wait(200))
   .pipe(sass({
     outputStyle: "compressed"
   }))

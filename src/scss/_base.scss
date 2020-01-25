@@ -33,10 +33,7 @@ h4,
 h5,
 h6 {
     font-family: $header-font;
-    font-size: $header-font-size;
     color: $header-color;
-    font-weight: 400;
-    text-transform: uppercase;
     margin: 0;
     padding: 0;
     line-height: 1.2em;
@@ -61,20 +58,18 @@ img {
     margin:0 3%;
     @include bp(s) {
         width:90%;
-        margin:0 5%;
-    }
-    @include bp(m) {
-        width:100%;
         max-width:1320px;
         margin:0 auto; 
     }
 }
-
-.padding-all {
-    padding:$gutter-width;
-}
 .padding-both {
     padding-top:$gutter-width;
+    padding-bottom:$gutter-width;
+}
+.padding-top {
+    padding-top:$gutter-width;
+}
+.padding-bottom {
     padding-bottom:$gutter-width;
 }
 .flex {
@@ -83,15 +78,31 @@ img {
     justify-content: space-between;
     .col-third {
         flex-basis:100%;
-        @include bp(m) {
+        @include bp(s) {
             flex-basis:32%;
         }
     }
     .col-two-third {
         flex-basis:100%; 
-        @include bp(m) {
+        @include bp(s) {
             flex-basis:65%;
         }
         
+    }
+}
+.hide {
+    display:none;
+}
+.button {
+    padding:.25em 1em;
+    text-align:center;
+    display:inline-block;
+    background:darken($grayish,10%);
+    color:$white;
+    transition:all .1s ease-in;
+    border-radius:2px;
+    &:hover {
+        background:lighten($turquoise,10%);
+        color:$grayish;
     }
 }
