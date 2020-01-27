@@ -12,9 +12,8 @@ var templates = {
 window.addEventListener("load", function () {
 
   activateThumbs();
-  activaterMoreLess();
+  activateMoreLess();
   activateSiteBlocks();
-
 
 });
 
@@ -23,7 +22,7 @@ function activateThumbs() {
     el.setAttribute("style", "background-image:url('" + el.getAttribute("data-bg") + "');");
   });
 }
-function activaterMoreLess() {
+function activateMoreLess() {
   forEach(document.querySelectorAll(".btn-more-less"), function (el) {
     el.addEventListener("click", function (e) {
       e.preventDefault();
@@ -80,5 +79,4 @@ function activateSiteBlocks() {
       return el.hasAttribute("data-index") ? el.getAttribute("data-index") : 0;
     }
   }
-  
 }

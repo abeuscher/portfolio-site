@@ -38,7 +38,12 @@ html(lang="en")
             a(href=item.url)=item.text
         each item in locals.header.nav
           li
-            a(href=item.url,class=item.class)=item.text        
+            a(href=item.url,title=item.text)
+              if item.class
+                span(class=item.class,aria-hidden="true")
+                span.hidden-text!=item.text
+              else
+                span!=item.text        
     block content
     footer
       p=locals.footer.legal

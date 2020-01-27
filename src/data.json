@@ -15,12 +15,12 @@
         "site_title": "Portfolio & Resume",
         "nav": [
             {
-                "text": "",
+                "text": "Github",
                 "class": "icon-github",
                 "url": "https://github.com/abeuscher/portfolio-site"
             },
             {
-                "text": "",
+                "text": "LinkedIn",
                 "class": "icon-linkedin",
                 "url": "https://www.linkedin.com/in/alex-beuscher-8314157/"
             },

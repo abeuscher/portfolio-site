@@ -32,7 +32,7 @@ $header-font-size:1.4em;
 $gutter-width:50px;
 
 // Section BAckground Colors
-$header-bg:radial-gradient(circle at 25%, $light-green 0%, darken($sea-green,10%) 100%);
+$header-bg:radial-gradient(circle at 25% 50%, $light-green 0%, darken($sea-green,10%) 100%);
 $header-mobile-bg:$sea-green;
 $header-text-color:$white;
 $nav-bg:$dark-green;
@@ -40,7 +40,7 @@ $nav-link-color:$white;
 $nav-link-hover-color:$yellow;
 $overview-bg:$white;
 $overview-text-color:$off-black;
-$portfolio-bg:radial-gradient(circle at 75%, $light-green 0%, darken($sea-green,10%) 100%);
+$portfolio-bg:radial-gradient(circle at 75% 50%, $light-green 0%, darken($sea-green,10%) 100%);
 $portfolio-mobile-bg:$sea-green;
 $portfolio-text-color:$white;
 $portfolio-text-hover-color:$yellow;
