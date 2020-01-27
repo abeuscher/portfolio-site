@@ -10,6 +10,8 @@
   .modal-content {
     background: $white;
     width: 90%;
+    max-width:1024px;
+    margin:0 auto;
     padding-bottom: $gutter-width * 2;
     align-self: center;
     position: relative;
@@ -40,9 +42,14 @@
     }
     .btn-close {
       position: absolute;
-      right: $gutter-width;
-      top: $gutter-width - 10px;
+      right: $gutter-width/4;
+      top: 0;
       font-size: 2em;
+      display:inline-block;
+      padding:$gutter-width/4;
+      &:hover {
+          color:$yellow;
+      }
     }
     .slide {
       width: 100%;

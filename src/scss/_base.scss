@@ -1,25 +1,25 @@
 //Basic Styles
 body {
-    font-family: $body-font;
-    background: $body-bg-color;
-    color: $body-text-color;
-    position: relative;
+  font-family: $body-font;
+  background: $body-bg-color;
+  color: $body-text-color;
+  position: relative;
 }
 
 .centered {
-    text-align: center;
+  text-align: center;
 }
 
 .right {
-    text-align: right;
+  text-align: right;
 }
 
 a {
-    text-decoration: none;
-    color: $body-link-color;
-    &:hover {
-        color:$body-link-hover-color;
-    }
+  text-decoration: none;
+  color: $body-link-color;
+  &:hover {
+    color: $body-link-hover-color;
+  }
 }
 
 h1,
@@ -28,90 +28,83 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $header-font;
-    margin: 0;
-    padding: 0;
-    line-height: 1.2em;
+  font-family: $header-font;
+  margin: 0;
+  padding: 0;
+  line-height: 1.2em;
 }
 
 h2 {
-    font-size: 30px;
-    margin: 0 0 20px;
+  font-size: 30px;
+  margin: 0 0 20px;
 }
 
 li,
 p {
-    line-height: 1.6;
-    margin: 0 0 1em;
-    font-size: 20px;
+  line-height: 1.6;
+  margin: 0 0 1em;
+  font-size: 20px;
 }
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 .inner {
-    width:94%;
-    margin:0 auto;
-    @include bp(s) {
-        width:90%;
-        max-width:1280px;
-        margin:0 auto; 
-    }
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1280px;
 }
 .padding-both {
-    padding-top:$gutter-width;
-    padding-bottom:$gutter-width;
+  padding-top: $gutter-width;
+  padding-bottom: $gutter-width;
 }
 .padding-top {
-    padding-top:$gutter-width;
+  padding-top: $gutter-width;
 }
 .padding-bottom {
-    padding-bottom:$gutter-width;
+  padding-bottom: $gutter-width;
 }
 .flex {
-    display:flex;
-    flex-wrap:wrap;
-    justify-content: space-between;
-    .col-third {
-        flex-basis:100%;
-        @include bp(s) {
-            flex-basis:32%;
-        }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .col-third {
+    flex-basis: 100%;
+    @include bp(s) {
+      flex-basis: 32%;
     }
-    .col-two-third {
-        flex-basis:100%; 
-        @include bp(s) {
-            flex-basis:65%;
-        }
-        
+  }
+  .col-two-third {
+    flex-basis: 100%;
+    @include bp(s) {
+      flex-basis: 65%;
     }
+  }
 }
 .hide {
-    max-height:0;
-    opacity:0;
-    overflow:hidden;
-    transition:opacity .25s ease-in;
-    &.show {
-        max-height:100%;
-        opacity:1;
-    }
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.25s ease-in;
+  &.show {
+    max-height: 100%;
+    opacity: 1;
+  }
 }
 .button {
-    padding:.25em 1em;
-    text-align:center;
-    display:block;
-    background:lighten($dark-green,5%);
-    color:$white;
-    transition:all .1s ease-in;
-    border-radius:2px;
-    border:1px solid $yellow;
-    @include bp(s) {
-        border:none;
-        display:inline-block;
-    }
-    &:hover {
-        background:lighten($dark-green,2%);
-        color:$yellow;
-    }
-    
-    
+  padding: 0.25em 1em;
+  text-align: center;
+  display: block;
+  background: lighten($dark-green, 5%);
+  color: $white;
+  transition: all 0.1s ease-in;
+  border-radius: 2px;
+  border: 1px solid $yellow;
+  @include bp(s) {
+    border: none;
+    display: inline-block;
+  }
+  &:hover {
+    background: lighten($dark-green, 2%);
+    color: $yellow;
+  }
 }

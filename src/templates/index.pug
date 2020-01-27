@@ -21,7 +21,7 @@ block content
             h3=site.title
           .mobile-info
             if (site.url)
-              a.ext-link(href=site.url,target="_blank")
+              a.ext-link(href=site.url,target="_blank",rel="noopener")
                 p.centered=site.url.replace(/^(?:https?:\/\/)?(?:www\.)?/i, "").split('/')[0]
             h3 I used...
             p=site.tech

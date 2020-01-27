@@ -8,8 +8,11 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0;
-    padding: 0;
+    padding: $gutter-width 0 0;
     vertical-align: top;
+    @include bp(s) {
+      padding-top:0;
+    }
     li {
       display: inline-block;
       vertical-align: top;
@@ -64,21 +67,23 @@
 .portfolio {
   background: $portfolio-mobile-bg;
   color: $portfolio-text-color;
-@include bp(s) {
-   background: $portfolio-bg;
-}
+  @include bp(s) {
+    background: $portfolio-bg;
+  }
   .thumb {
     @include aspect-ratio(640, 400);
     background-size: 100%;
     background-position: center top;
-    filter: grayscale(100%);
+    @include bp(s) {
+      filter: grayscale(100%);
+    }
   }
   p.tech,
   h3 {
     color: $portfolio-text-color;
   }
   h3 {
-    font-weight:normal;
+    font-weight: normal;
     padding-top: $gutter-width/3;
     text-align: center;
   }
@@ -90,45 +95,57 @@
     font-size: 1em;
   }
   .mobile-info {
-    text-align:left;
+    text-align: left;
     h3 {
-      text-align:left;
-      font-size:18px;
-      font-weight:700;
+      text-align: left;
+      font-size: 18px;
+      font-weight: 700;
     }
-    p, a {
-      color:$white;
+    p,
+    a {
+      color: $white;
     }
     @include bp(s) {
-      display:none;
+      display: none;
+    }
+    a.ext-link {
+      p {
+        font-size: 14px;
+      }
+      &:hover {
+        p {
+          color:$yellow;
+        }
+        
+      }
     }
   }
   .site-block {
     flex-basis: 100%;
     position: relative;
-    display:inline-block;
-    margin-top:$gutter-width;
-    
+    display: inline-block;
+    margin-top: $gutter-width;
+
     cursor: pointer;
     * {
       transition: all 0.2s ease-in;
     }
     @include bp(s) {
       flex-basis: 23.5%;
-      
     }
     &:hover {
       p.tech,
+      a,
       h3 {
         color: $portfolio-text-hover-color;
       }
-
       .thumb {
-        filter: grayscale(0%) blur(0);
-        background-size: 101%;
+        @include bp(s) {
+          filter: grayscale(0%) blur(0);
+          background-size: 101%;
+        }
       }
     }
-
   }
 }
 .resume {
@@ -176,12 +193,12 @@
     }
   }
   @include bp(s) {
-    .col-third, .col-two-third {
+    .col-third,
+    .col-two-third {
       padding-bottom: $gutter-width;
     }
     .col-third {
       text-align: right;
-      
     }
     .thumb-bucket {
       text-align: right;

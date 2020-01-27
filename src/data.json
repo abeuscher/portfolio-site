@@ -46,7 +46,7 @@
     "overview": {
         "title": "overview",
         "intro_header": "Overview",
-        "intro": "I am a web developer working in the San Francisco Bay Area. I have spent most of the past twenty years as a lead or sole tech within marketing based enterprises. I enjoy bringing order to chaos. Much of my work has been client facing, interacting directly with stakeholders and other producers, and I work hard to bring their individual business needs and brand identities to the web. I am also good at working in high stress, clutch situations; I have participated in global product launches, run multiple camera live video shoots, and been with several startups as they have scaled into large companies.",
+        "intro": "I am a web developer working in the San Francisco Bay Area. I have spent most of the past twenty years as a lead or sole tech within marketing based enterprises. I enjoy bringing order to chaos. Much of my work has been client facing, interacting directly with stakeholders and other producers. Together we have successfully turned business needs and brand identities into successful websites, many of which are still in use. I am experienced at working in high stress, clutch situations; I have participated in global product launches, run multiple camera live video shoots, and been with several startups as they have scaled into large companies.",
         "skills_header": "Skills",
         "skills": [
             {
@@ -140,7 +140,7 @@
                 ],
                 "role": "Developer / Designer",
                 "tech": "Wordpress, Pug, Gulp",
-                "description": "I came into this site after it had been online for several years and reworked through several agencies. I rebuilt the site theme and contnet types using modern practices and version control. I was able to reduce page load time from an avergae of 14s per page to a more reasonable 2.5s per page. I was also able, along with our content team, to double time spent on page and increase traffic from search. Through funnel optimization and UX improvment, total site conversions have doubled.",
+                "description": "I came into this site after it had been online for several years and reworked through several agencies. I rebuilt the site theme using modern practices, implemented version control, and removed all front end plugins. I was able to reduce page load time from an avergae of 14s per page to a more reasonable 2.5s per page. I was then able to help the content team double time spent on page and significantly increase organic search traffic. Through funnel optimization and UX improvment, total site conversions have doubled.",
                 "url": "https://www.dynamicsignal.com",
                 "modal_thumb": "thm-ds.jpg"
             },
@@ -232,7 +232,7 @@
         "jobs": [
             {
                 "name": "Dynamic Signal",
-                "description": "I have been in charge of the public facing web properties at Dynamic Signal for the past several years. This includes a public Wordpress Site, a support site at Zendesk, a Marketo Installation, and a Content Hub at Uberflip among others. My work also involved analytics, strategy, content creation (written and video), and coordination with external consultancies around SEO concerns.",
+                "description": "Dynamic Signal is a B2B Saas company. I have been in charge of their public facing web properties for the past several years. This includes a public Wordpress Site, a support site at Zendesk, a Marketo Installation, and a Content Hub at Uberflip among others. Along with developmet and maintenance, my work also involved analytics, strategy, content creation (written and video), and some small amount of involvement with the core product, an employee communcation platform.",
                 "location": "San Bruno, CA",
                 "url": "dynamicsignal.com",
                 "thumb": "thm-ds.jpg",
@@ -251,7 +251,7 @@
             },
             {
                 "name": "2K Games",
-                "description": "I was the first developer on the marketing department's web team at 2K. Previously sites were built through managed third parties. There was no source control or modular approach to site builds. As a means to help our editors, we planned and built a central CMS as a data source. From here we exported data to our public facing sites, both those built internally and those sourced from third parties. We also added source control and continuous deploy, and adopted a modular approach to code building. In the course of this, we began hosting sites in AWS, migrating older properties from a less sophisticated server environment. After growing our team I was promoted to a senior position. By the end of my time at 2K, most work was being done in house, with a greatly improved content editing workflow.",
+                "description": "2K Games is a video game publisher of titles such as Borderlands, Civilization, and NBA 2K. I was the first full time web developer in 2K's marketing department. Previous to my arrival, sites were built through managed agencies. After implementing basic processes, source control, and tightening security, I was promoted and my team got a second developer. Together, we planned and built a central CMS, set it up as a REST API, and built a continuous deploy process using Amazon's AWS services. We were then able to consolidate our content editing and localization efforts and the content machine became much more robust. The system we built is still in use today and has expanded to support many other features in the 2K ecosystem.",
                 "location": "Novato, CA",
                 "url": "2k.com",
                 "thumb": "thm-2k.jpg",
@@ -340,7 +340,7 @@
             },
             {
                 "name": "Freelance Web Design",
-                "description": "I work on and off as a freelance developer and designer. Along with my web work, I do consulting in basic IT, application training, and print design.",
+                "description": "I work on and off as a freelance developer and designer. Along with my web work, I do consulting in basic IT, application training, and print design. Clients have included film, healthcare, environmetal, and other concerns. I continue to support a small number of clients.",
                 "location": "Allston, MA / Alameda, CA",
                 "url": "alexbeuscher.com",
                 "thumb": "thm-self.jpg",
@@ -368,7 +368,7 @@
             },
             {
                 "name": "AMICAS, Inc.",
-                "description": "AMICAS provides software for the management and viewing of medical images (x-rays) inside of a web browser on standard PC's. My responsibilities included redesign and implementation of public website as well as the design of an Intranet Site.",
+                "description": "AMICAS provided software for the management and viewing of medical images (x-rays) inside of a web browser on standard PC's. My responsibilities included redesign and implementation of public website as well as the design of an Intranet Site.",
                 "location": "Brighton, MA / Chicago, IL",
                 "url": "",
                 "thumb": "thm-amicas.jpg",
