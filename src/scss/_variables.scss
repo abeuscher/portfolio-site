@@ -1,41 +1,50 @@
+$bps:(xs: 0, s:640px, m:1024px, l:1320px);
+
 //config
-$cdn-path:"http://cdn.alexbeuscher.com/alexbeuscher.com/";
-$img-path:$cdn-path+"img/";
+$cdn-path:"/";
+$img-path:$cdn-path+"images/";
 $font-path:"/fonts/";
 
 //colors
 $black:#000;
+$white:#fff;
 $off-white:#d2dce6;
 $off-black:#031921;
-$bright-blue:#336699;
-$frog-green:#709864;
-$corn-yellow:#fecc1d;
-$bright-yellow:#fff227;
-$light-green:#d2e6dc;
 
-//$body-bg-color:linear-gradient(#131313 0%,#1c1c1c 20%,#2b2b2b 40%,#111111 60%,#000000 100%);
-$body-bg-color:$frog-green;
+$dark-green:#004445;
+$sea-green:#2c7873;
+$light-green:#6fb98f;
+$yellow:#ffd800;
 
-$logo-color-first:$corn-yellow;
-$logo-color-rest:$bright-yellow;
-
-$wrapper-bg-color:$light-green;
+$body-bg-color:$white;
 
 $body-text-color:$off-black;
-$body-link-color:$bright-blue;
-
-$header-color:$bright-blue;
+$body-link-color:$black;
+$body-link-hover-color:$off-black;
 
 //fonts
-$body-font:'Cabin',sans-serif;
-$nav-font:'Cabin',sans-serif;
-$header-font:'Cabin', sans-serif;
-$logo-font:'Bad Script', sans-serif;
+$body-font:'Open Sans',sans-serif;
+$nav-font:'Open Sans',sans-serif;
+$header-font:'Open Sans', sans-serif;
+$logo-font:'Open Sans', sans-serif;
 $header-font-size:1.4em;
 
-//GRID SETTINGS
-$num-cols:12;
 $gutter-width:50px;
-$prefix : "col";
-$bps: (xs: 0, s:640px, m:1024px, l:1320px);
-$susy : ( columns:$num-cols,gutters:1/2,gutter-position:inside);
+
+// Section BAckground Colors
+$header-bg:radial-gradient(circle at 25% 50%, $light-green 0%, darken($sea-green,10%) 100%);
+$header-mobile-bg:$sea-green;
+$header-text-color:$white;
+$nav-bg:$dark-green;
+$nav-link-color:$white;
+$nav-link-hover-color:$yellow;
+$overview-bg:$white;
+$overview-text-color:$off-black;
+$portfolio-bg:radial-gradient(circle at 75% 50%, $light-green 0%, darken($sea-green,10%) 100%);
+$portfolio-mobile-bg:$sea-green;
+$portfolio-text-color:$white;
+$portfolio-text-hover-color:$yellow;
+$resume-bg:$white;
+$resume-text-color:$off-black;
+$footer-bg:darken($dark-green,5%);
+$footer-text-color:$white;

@@ -1,0 +1,57 @@
+extends ./inc/page.pug
+
+block content
+  section.overview
+    .inner.padding-both.flex
+      .col-two-third
+        p=locals.overview.intro
+      .col-third
+        ul.skills
+          each skill in locals.overview.skills
+            li
+              .skill-box
+                p(class="weight-"+ skill.level)=skill.title
+  section.portfolio
+    .inner.flex
+      each site,idx in locals.portfolio.sites
+        - var className = idx > 3 ? "hide more-less" : "";
+        if site.thumbs
+          .site-block(class=className, data-info=JSON.stringify(site),data-index=idx)
+            .thumb(data-bg=locals.config.imgPath + site.thumbs[0])
+            h3=site.title
+          .mobile-info
+            if (site.url)
+              a.ext-link(href=site.url,target="_blank",rel="noopener")
+                p.centered=site.url.replace(/^(?:https?:\/\/)?(?:www\.)?/i, "").split('/')[0]
+            h3 I used...
+            p=site.tech
+            h3 About the project...
+            p=site.description
+    .inner.centered.padding-bottom
+      a.button.btn-more-less(href="#") more
+  section.resume
+    .inner.flex.padding-top
+      .col-third
+      .col-two-third
+        h2 Work History
+    .inner
+      each job,idx in locals.resume.jobs
+        - var className = idx > 3 ? "hide more-less" : "";
+        .job-block.flex(class=className)
+          .col-third
+            .thumb-bucket
+              if job.url
+                a(href="http://"+job.url)
+                  .thumb(data-bg=locals.config.imgPath+job.thumb)
+              else
+                .thumb(data-bg=locals.config.imgPath+job.thumb)
+            h4=job.name
+            cite=job.location
+            each position in job.positions
+              h5=position.title
+              p.timespan=position.time_span
+          .col-two-third
+            .description
+              p=job.description
+    .inner.centered.padding-bottom
+      a.button.btn-more-less(href="#") more

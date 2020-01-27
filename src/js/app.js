@@ -1,49 +1,82 @@
 var forEach = require("lodash/foreach");
-var flatten = require("lodash/flatten");
-var Modal = require("./modal/index.js");
-var transEvent = require("./utils/which-transition-event.js");
+var Flickity = require("flickity");
+var parseHTML = require("./utils/parse-html");
 
+require("flickity-as-nav-for");
 require("./utils/class-list-shim.js");
 
-window.addEventListener("load", function() {
-  
+var templates = {
+  "modalCarousel": require("./components/site-modal.pug")
+};
+
+window.addEventListener("load", function () {
+
   activateThumbs();
-  activateModals();
-
-  function activateThumbs() {
-    forEach(document.querySelectorAll("[data-bg]"), function(el) {
-      el.setAttribute("style", "background:url('" + el.getAttribute("data-bg") + "') no-repeat center top; background-size:cover;");
-    });
-  }
-
-  function activateModals() {
-    var modals = [],
-        els = document.querySelectorAll(".thumb");
-    var modalCB = function(modals,thisModal) {
-      forEach(document.querySelectorAll('[data-switch-modal]'), function(el) {
-        var index = el.getAttribute("data-switch-modal");
-        el.addEventListener("click", function(e) {
-          console.log("pager");
-          thisModal.close(e);
-          modals[index].open();
-          return false;
-        });
-      });
-    }
-    forEach(els, function(el, index) {
-        var modal_opts = {
-          "template":require("./components/modal.pug"),
-          "data":JSON.parse(el.getAttribute("data-info")),
-          "links" : el
-        };
-        modals[index] = new Modal(modal_opts);
-        modals[index].ee.on("open", function() {
-            console.log();
-            modalCB(modals,modals[index]);
-        });
-    });
-  }
-
-
+  activateMoreLess();
+  activateSiteBlocks();
 
 });
+
+function activateThumbs() {
+  forEach(document.querySelectorAll("[data-bg]"), function (el) {
+    el.setAttribute("style", "background-image:url('" + el.getAttribute("data-bg") + "');");
+  });
+}
+function activateMoreLess() {
+  forEach(document.querySelectorAll(".btn-more-less"), function (el) {
+    el.addEventListener("click", function (e) {
+      e.preventDefault();
+      var thisHiddenBoxes = e.target.parentNode.parentNode.querySelectorAll(".more-less");
+      forEach(thisHiddenBoxes, function (box) {
+        box.classList.toggle("show");
+      });
+      this.innerHTML = this.innerHTML == "more" ? "less" : "more";
+    });
+  });
+}
+function activateSiteBlocks() {
+  var siteBlocks = document.querySelectorAll("[data-info]");
+  var carouselData = [];
+  forEach(siteBlocks, function (block) {
+    carouselData.push(JSON.parse(block.getAttribute("data-info")));
+    block.addEventListener("click", launchModal);
+  });
+
+  document.body.appendChild(parseHTML(templates.modalCarousel(carouselData)));
+
+  var sc = new Flickity(document.getElementById("site-carousel"), {
+    "wrapAround": true,
+    "pageDots": false,
+    "lazyLoad": 2,
+    "autoPlay": 8000,
+    "adaptiveHeight": false
+  });
+
+  document.getElementById("modal-wrapper").addEventListener("click", closeModal);
+  document.getElementsByClassName("btn-close")[0].addEventListener("click", closeModal);
+
+  function closeModal(e) {
+    if (e.target.classList.contains("modal-bg") || e.target.classList.contains("btn-close")) {
+      e.preventDefault();
+      document.body.classList.remove("modal-open");
+    }
+  }
+
+  function launchModal(e) {
+    e.preventDefault();
+    if (document.body.classList.contains("modal-open")) {
+      document.body.classList.remove("modal-open");
+    }
+    else {
+      document.body.classList.add("modal-open");
+      sc.resize();
+    }
+    sc.select(getIndex(e.target));
+    function getIndex(el) {
+      while (el && !el.hasAttribute("data-index")) {
+        el = el.parentNode;
+      }
+      return el.hasAttribute("data-index") ? el.getAttribute("data-index") : 0;
+    }
+  }
+}

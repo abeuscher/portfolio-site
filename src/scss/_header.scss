@@ -1,0 +1,90 @@
+//Hide first image to be scraped by weird scrapers.
+#hidden-thumb {
+  display: none;
+}
+//Nav, Header, and Footer
+#top-nav {
+  background: $nav-bg;
+  width: 100%;
+  color: $header-text-color;
+  background-size: cover;
+  text-align: center;
+  padding: 0;
+  border-top:1px solid $yellow;
+  ul {
+    @include list-to-menu();
+    display: inline-block;
+
+    li {
+      padding: 0 0.25em;
+      margin: 0;
+      @include bp(s) {
+        padding: 0 1em;
+      }
+
+      a {
+        display: block;
+        font-size: 0.8em;
+        line-height: $gutter-width;
+        color: $nav-link-color;
+        transition: 0.25s text-shadow ease-in;
+        text-shadow: -1px 1px 5px #000;
+
+        &:hover {
+          text-shadow: -1px 1px 10px #000;
+          color: $nav-link-hover-color;
+        }
+        .hidden-text {
+          display:none;
+        }
+      }
+    }
+  }
+}
+
+header {
+  background:$header-mobile-bg;
+  color:$header-text-color;
+  padding: $gutter-width 0 $gutter-width/3;
+  text-align: center;
+  @include bp(s) {
+    background:$header-bg;
+  }
+  h1,
+  h2 {
+    color:$header-text-color;
+    
+  }
+  h1 {
+    font-family: $logo-font;
+    @include bp(m) {
+      font-size: 3em;
+    }
+  }
+
+  h2 {
+    font-size: 1em;
+    font-family: $body-font;
+    @include bp(m) {
+      font-size: 1.25em;
+    }
+  }
+
+  .contact {
+    display: inline-block;
+    margin: 0.8em 0.5em;
+  }
+}
+
+nav {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      padding-right: 20px;
+    }
+  }
+}
