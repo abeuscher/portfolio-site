@@ -4,12 +4,13 @@
 }
 //Nav, Header, and Footer
 #top-nav {
-  background: $header-bg;
+  background: $nav-bg;
   width: 100%;
   color: $header-text-color;
   background-size: cover;
   text-align: center;
   padding: $gutter-width/2 0;
+  border-top:1px solid $yellow;
   ul {
     @include list-to-menu();
     display: inline-block;
@@ -31,7 +32,7 @@
 
         &:hover {
           text-shadow: -1px 1px 10px #000;
-          color: $turquoise;
+          color: $nav-link-hover-color;
         }
       }
     }
@@ -39,27 +40,30 @@
 }
 
 header {
-  padding: $gutter-width 0;
+  background:$header-mobile-bg;
+  color:$header-text-color;
+  padding: $gutter-width 0 $gutter-width/3;
   text-align: center;
+  @include bp(s) {
+    background:$header-bg;
+  }
   h1,
   h2 {
-    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5);
+    color:$header-text-color;
+    
   }
   h1 {
     font-family: $logo-font;
-    color: $logo-color;
-    font-size: 1.5em;
     @include bp(m) {
-      font-size: 5em;
+      font-size: 3em;
     }
   }
 
   h2 {
-    font-size: 1.25em;
+    font-size: 1em;
     font-family: $body-font;
-    color: $logo-color;
     @include bp(m) {
-      font-size: 2em;
+      font-size: 1.25em;
     }
   }
 

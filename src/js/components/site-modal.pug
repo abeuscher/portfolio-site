@@ -1,0 +1,27 @@
+.modal-bg#modal-wrapper
+    .modal-content
+        a.btn-close(href="#")!="&times;"
+        .inner
+            #site-carousel
+                each slide in locals
+                    .slide
+                        .inner
+                            .title
+                                if slide.modal_thumb
+                                    if (slide.url)
+                                        a(href=slide.url,target="_blank")
+                                            img(src="/images/"+slide.modal_thumb)
+                                            h2.centered=slide.title
+                                    else
+                                        img(src="/images/"+slide.modal_thumb)
+                                        h2.centered=slide.title
+                                else
+                                    h2.centered=slide.title
+                                if (slide.url)
+                                    a.ext-link(href=slide.url,target="_blank")
+                                        p.centered=slide.url.replace(/^(?:https?:\/\/)?(?:www\.)?/i, "").split('/')[0]
+                            .info
+                                h3 I used...
+                                p=slide.tech
+                                h3 About the project...
+                                p=slide.description

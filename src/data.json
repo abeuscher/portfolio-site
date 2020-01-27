@@ -46,7 +46,7 @@
     "overview": {
         "title": "overview",
         "intro_header": "Overview",
-        "intro": "My name is Al and I build websites. I am currently working as a web developer in the San Francisco Bay Area. I have over twenty years of experience in the field and have spent the past ten here in California primarily focused on front-end development. As a sole/lead tech in most of the roles I have held, I have worked with internal and external stakeholders, agencies, sub-contractors and other third parties as both director and collaborator. I have also worked professionally as a video producer, video editor, copy editor, trainer, tutor, voice-over artist, dj, and master of ceremonies.",
+        "intro": "I am a web developer working in the San Francisco Bay Area. I have spent most of the past twenty years as a lead or sole tech within marketing based enterprises. I enjoy bringing order to chaos. Much of my work has been client facing, interacting directly with stakeholders and other producers, and I work hard to bring their individual business needs and brand identities to the web. I am also good at working in high stress, clutch situations; I have participated in global product launches, run multiple camera live video shoots, and been with several startups as they have scaled into large companies.",
         "skills_header": "Skills",
         "skills": [
             {
@@ -58,27 +58,19 @@
                 "level": 3
             },
             {
-                "title": "PHP",
-                "level": 2
-            },
-            {
-                "title": "jQuery",
-                "level": 3
-            },
-            {
-                "title": "SQL",
-                "level": 2
-            },
-            {
                 "title": "CSS / SCSS",
                 "level": 3
             },
             {
-                "title": "Angular",
-                "level": 1
+                "title": "Wordpress",
+                "level": 3
             },
             {
                 "title": "React",
+                "level": 1
+            },
+            {
+                "title": "Vue",
                 "level": 1
             },
             {
@@ -86,15 +78,15 @@
                 "level": 2
             },
             {
-                "title": "Expression Engine",
-                "level": 3
-            },
-            {
-                "title": "Wordpress",
+                "title": "PHP",
                 "level": 2
             },
             {
-                "title": "Vue",
+                "title": "SQL",
+                "level": 2
+            },
+            {
+                "title": "Angular",
                 "level": 1
             },
             {
@@ -111,19 +103,27 @@
             },
             {
                 "title": "ZenDesk",
-                "level": 1
+                "level": 2
             },
             {
                 "title": "Git",
                 "level": 3
             },
             {
-                "title": "Jade/Pug",
+                "title": "Pug",
                 "level": 3
             },
             {
                 "title": "Marketo",
                 "level": 3
+            },
+            {
+                "title": "Unity",
+                "level": 1
+            },
+            {
+                "title": "C#",
+                "level": 1
             }
         ]
     },
@@ -140,7 +140,7 @@
                 ],
                 "role": "Developer / Designer",
                 "tech": "Wordpress, Pug, Gulp",
-                "description": "I came into this site after it had been online for several years. I was first brought in to manage an agency who were rebuilding portions of the site. After they were done, I began a ground-up reworking of the site theme using modern practices, version control, and a preprocessor (gulp) to build the theme and allow for some decoupling from the Wordpress core to increase page speed and site flexibility. I was able to reduce page load time from an avergae of 14s per page to a more reasonable 2.5s per page, and also to export the site header and footer via js injection to our third party properties, thus maintaining visual cotinuity between our two third party providers (MArketo and Uberflip) as well as syntactic continuity in the header and footer space.",
+                "description": "I came into this site after it had been online for several years and reworked through several agencies. I rebuilt the site theme and contnet types using modern practices and version control. I was able to reduce page load time from an avergae of 14s per page to a more reasonable 2.5s per page. I was also able, along with our content team, to double time spent on page and increase traffic from search. Through funnel optimization and UX improvment, total site conversions have doubled.",
                 "url": "https://www.dynamicsignal.com",
                 "modal_thumb": "thm-ds.jpg"
             },
@@ -152,8 +152,8 @@
                 ],
                 "role": "Developer",
                 "tech": "Zendesk, Vue, Theming & Customization",
-                "description": "The Dynamic Signal Support site is built on the ZenDesk platform. This site uses a custom Zendesk theme (repo available on request) to serve suppot pages for our site. This was a cross-departmental effort which I ran and coordinated and continue to provide support for.",
-                "url": "https://www.xcom.com",
+                "description": "The Dynamic Signal Support site is built on the ZenDesk platform. This site uses a custom Zendesk theme to serve support pages for our site. This was a cross-departmental effort which I ran and coordinated.",
+                "url": "https://support.dynamicsignal.com",
                 "modal_thumb": "thm-ds.jpg"
             },
             {
@@ -164,7 +164,7 @@
                 ],
                 "role": "Developer",
                 "tech": "Expression Engine, Telemetry, Localization",
-                "description": "This site was built using Expression Engine. News was imported to the site from a central CMS, where localized content was provided by editors in multiple locations. The site also feature a telemtry piece, which is a javascript application which surfaces data from a REST API provided to us by the developer, Firaxis Games. It is written in Vanilla JS, with portions of the API interaction written in PHP to make an oAuth connection and cache data over intervals from the API to limit requests.",
+                "description": "This was our first experimentation with connecting to in game stats to enrich the user experience at the site and provide some connectivity to the game. We used ajax calls to collect and store stats locally on our server, then built a dynamic infographic displaying community stats from these data.",
                 "url": "https://www.xcom.com",
                 "modal_thumb": "thm-xcom-modal.jpg"
             },
@@ -176,7 +176,7 @@
                 ],
                 "role": "Developer",
                 "tech": "Expression Engine, Localization, Oauth",
-                "description": "In its iteration, WWE 2K has become a sophisticated site. As we grew to understand the brand and audience and streamline our own processes, we were better able to serve the need. This site was constructed using Expression Engine, with a centralized CMS. The challenge of introducing third party developers into a secure, distributed environment was ongoing at 2k. We worked to incorporate a third party promotional web application with the WWE site in its most recent year, where visitors could participate in a small web game which encouraged sign up for My2K, a customer loyalty program. This program performed well with customers, bringing our audience a reason to return.",
+                "description": "This site was our department's first effort in building a localized site. In its first iteration, we supporeted Spanish and English, using Expression Engine's built in localization features for support.",
                 "url": "https://wwe.2k.com/",
                 "modal_thumb": "thm-wwe-modal.jpg"
             },
@@ -187,8 +187,7 @@
                 ],
                 "role": "Developer",
                 "tech": "PHP, Rest API, Memcache, Oauth",
-                "description": "This site was built to interface with the in-game experience of WWE 2K. Players may upload and manage their in game images from the site. This was a front end application built in javascript with a php component, connecting to a REST API endpoint provided through a third party. The interior design of the application was skinned to match the in game experience.",
-                "url": "https://wwe.2k.com/wwe2k17logo/",
+                "description": "This site was built to interface with the in-game experience of WWE 2K '17. Players could upload and manage their in game images from the site. This was a front end application built in javascript with a php component, connecting to a REST API endpoint provided through a third party. The interior design of the application was skinned to match the in game experience.",
                 "modal_thumb": "thm-wwe-modal.jpg"
             },
             {
@@ -204,15 +203,13 @@
                 "modal_thumb": "thm-borderlands-modal.jpg"
             },
             {
-                "title": "DJ Michael",
-                "thumbs": [
-                    "thm-djm-desktop.jpg",
-                    "thm-djm-mobile.jpg"
-                ],
-                "role": "Private Contractor",
-                "tech": "Cockpit CMS, Jade/Pug, Templating",
-                "description": "This is a site built for Michael O'Neill, who provides DJ services for weddings and events throughout New England. The site is built with Cockpit CMS and custom. Design work was sub contracted, and provided as PSD's. I did the site build using a basic preprocessing script leveraging gulp and browserify, and the templates are done in php. This was a straightforward job with an old friend and client, and I am happy with the result.",
-                "url": "http://djmichael.com"
+                "title": "Hangar 13 Games",
+                "thumbs": ["thm-hangar13-desktop.jpg", "thm-hangar13-mobile.jpg"],
+                "role": "Developer",
+                "tech": "Static Generated, Continuous Deployment, Rest API based CMS, Jade/Pug",
+                "description": "This is a small site for one of 2k's Game Developers. It is fed by a centralized CMS, and statically generated under continuous deploy using TeamCity as the build agent. With smaller clients, there is often a problem of throughput. In this case, the studio's active social media activity to keep their site in the moment, along with relevant aggregated news from mafiagame.com, which showcases the studios current offering, Mafia 3. By organizing the content in chronological order from most recent, returning visitors are given content to engage with the studio on, with very little additional input from their team.",
+                "url": "https://hangar13games.com/",
+                "modal_thumb": "thm-hangar13-modal.jpg"
             },
             {
                 "title": "MCO Productions",
@@ -220,8 +217,8 @@
                     "thm-mco-desktop.jpg"
                 ],
                 "role": "Private Contractor",
-                "tech": "Wordpress, Custom Theme",
-                "description": "This site is currently under rebuild. In its current iteration, the site is built in Wordpress with a custom theme and some custom plugin work as well. Future build will utilize Cockpit CMS, and feature more application like behavior and a cleaner more modern design.",
+                "tech": "Cockpit CMS, Pug, Templating",
+                "description": "This is a site built for Michael O'Neill, who provides DJ services for weddings and events throughout New England. The site is built with Cockpit CMS and custom. Design work was sub contracted, and provided as PSD's. I did the site build using a basic preprocessing script leveraging gulp and browserify, and the templates are done in php. This was a straightforward job with an old friend and client, and I am happy with the result.",
                 "url": "http://mcoproductions.com"
             }
         ]

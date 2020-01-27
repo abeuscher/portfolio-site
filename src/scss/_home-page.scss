@@ -1,5 +1,6 @@
 .overview {
-  background: $blue-gray;
+  background: $overview-bg;
+  color: $overview-text-color;
   p {
     margin: 0;
   }
@@ -19,14 +20,37 @@
       .skill-box {
         margin: 5px;
         padding: 5px;
-        background: #fff;
-        color: $black;
+        background: lighten($dark-green, 10%);
+        color: $white;
         text-align: center;
 
         p {
-          font-size: .8em;
+          font-size: 0.8em;
           line-height: 1.5;
           overflow: hidden;
+          &:after {
+            content: "\e9d7\e9d7\e9d7";
+            display: block;
+            font-family: "icomoon";
+            color: $yellow;
+            font-size: 10px;
+            letter-spacing: 3px;
+          }
+          &.weight-1 {
+            &:after {
+              content: "\e9d9\e9d7\e9d7";
+            }
+          }
+          &.weight-2 {
+            &:after {
+              content: "\e9d9\e9d9\e9d7";
+            }
+          }
+          &.weight-3 {
+            &:after {
+              content: "\e9d9\e9d9\e9d9";
+            }
+          }
         }
 
         .stars {
@@ -38,18 +62,23 @@
 }
 
 .portfolio {
-  background: $turquoise;
-
+  background: $portfolio-mobile-bg;
+  color: $portfolio-text-color;
+@include bp(s) {
+   background: $portfolio-bg;
+}
   .thumb {
     @include aspect-ratio(640, 400);
-    background-size: 110%;
-    background-position: center center;
-    filter: grayscale(80%);
+    background-size: 100%;
+    background-position: center top;
+    filter: grayscale(100%);
   }
-  p.tech, h3 {
-    color: darken($grayish,5%);
+  p.tech,
+  h3 {
+    color: $portfolio-text-color;
   }
   h3 {
+    font-weight:normal;
     padding-top: $gutter-width/3;
     text-align: center;
   }
@@ -60,39 +89,51 @@
     font-style: italic;
     font-size: 1em;
   }
-  .site-block {
-    flex-basis: 100%;
-    cursor: pointer;
-    * {
-    transition:all .2s ease-in;  
+  .mobile-info {
+    text-align:left;
+    h3 {
+      text-align:left;
+      font-size:18px;
+      font-weight:700;
+    }
+    p, a {
+      color:$white;
     }
     @include bp(s) {
-      flex-basis: 32%;
+      display:none;
     }
-    @include bp(m) {
+  }
+  .site-block {
+    flex-basis: 100%;
+    position: relative;
+    display:inline-block;
+    margin-top:$gutter-width;
+    
+    cursor: pointer;
+    * {
+      transition: all 0.2s ease-in;
+    }
+    @include bp(s) {
       flex-basis: 23.5%;
+      
     }
     &:hover {
-      p.tech, h3 {
-        color: darken($grayish,10%);
+      p.tech,
+      h3 {
+        color: $portfolio-text-hover-color;
       }
-      
+
       .thumb {
         filter: grayscale(0%) blur(0);
-        background-size: 100%;
+        background-size: 101%;
       }
     }
+
   }
 }
 .resume {
-  background: $blue-gray;
-  //color:$white;
-  h2,
-  h3,
-  h4,
-  h5 {
-    //color:$white;
-  }
+  background: $resume-bg;
+  color: $resume-text-color;
 }
 .job-block {
   position: relative;
@@ -135,9 +176,12 @@
     }
   }
   @include bp(s) {
-    margin-bottom: $gutter-width;
+    .col-third, .col-two-third {
+      padding-bottom: $gutter-width;
+    }
     .col-third {
       text-align: right;
+      
     }
     .thumb-bucket {
       text-align: right;

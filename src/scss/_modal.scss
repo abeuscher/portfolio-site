@@ -1,0 +1,67 @@
+.modal-bg {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+
+  .modal-content {
+    background: $white;
+    width: 90%;
+    padding-bottom: $gutter-width * 2;
+    align-self: center;
+    position: relative;
+    .inner {
+      padding-top: 4em;
+      .title {
+        text-align: center;
+        margin-bottom: $gutter-width * 2;
+        h2 {
+          font-size: 16px;
+          font-weight: 200;
+          margin: 0;
+        }
+        img {
+          height: 50px;
+          width: auto;
+        }
+        p {
+          font-size: 12px;
+        }
+      }
+      .flickity-enabled {
+        position: static;
+      }
+      p {
+        font-size: 1em;
+      }
+    }
+    .btn-close {
+      position: absolute;
+      right: $gutter-width;
+      top: $gutter-width - 10px;
+      font-size: 2em;
+    }
+    .slide {
+      width: 100%;
+      display: flex;
+      position: relative;
+      justify-content: center;
+      .inner {
+        padding: 0 $gutter-width * 2;
+        align-self: center;
+      }
+    }
+  }
+}
+body.modal-open {
+  @include bp(s) {
+    overflow: hidden;
+    .modal-bg {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

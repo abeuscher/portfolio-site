@@ -10,23 +10,17 @@ $black:#000;
 $white:#fff;
 $off-white:#d2dce6;
 $off-black:#031921;
-$light-blue:#effcef;
-$blue-gray:#ccedd2;
-$turquoise:#94d3ac;
-$grayish:#655c56;
 
-//$body-bg-color:linear-gradient(#131313 0%,#1c1c1c 20%,#2b2b2b 40%,#111111 60%,#000000 100%);
-$body-bg-color:$light-blue;
+$dark-green:#004445;
+$sea-green:#2c7873;
+$light-green:#6fb98f;
+$yellow:#ffd800;
 
-$logo-color:$grayish;
-
-$wrapper-bg-color:$white;
+$body-bg-color:$white;
 
 $body-text-color:$off-black;
 $body-link-color:$black;
 $body-link-hover-color:$off-black;
-
-$header-color:$off-black; 
 
 //fonts
 $body-font:'Open Sans',sans-serif;
@@ -38,16 +32,19 @@ $header-font-size:1.4em;
 $gutter-width:25px;
 
 // Section BAckground Colors
-$header-bg:$grayish;
-$header-text-color:$black;
-$bg-nav:#000;
-$nav-link-color:#fff;
-$nav-link-hover-color:#fff;
-$overview-bg:#000;
-$overview-text-color:#fff;
-$portfolio-bg:#000;
-$portfolio-text-color:#fff;
-$resume-bg:#000;
-$resume-text-color:#fff;
-$footer-bg:#000;
-$footer-text-color:#fff;
+$header-bg:radial-gradient(circle at 25%, $light-green 0%, darken($sea-green,10%) 100%);
+$header-mobile-bg:$sea-green;
+$header-text-color:$white;
+$nav-bg:$dark-green;
+$nav-link-color:$white;
+$nav-link-hover-color:$yellow;
+$overview-bg:$white;
+$overview-text-color:$off-black;
+$portfolio-bg:radial-gradient(circle at 75%, $light-green 0%, darken($sea-green,10%) 100%);
+$portfolio-mobile-bg:$sea-green;
+$portfolio-text-color:$white;
+$portfolio-text-hover-color:$yellow;
+$resume-bg:$white;
+$resume-text-color:$off-black;
+$footer-bg:darken($dark-green,5%);
+$footer-text-color:$white;

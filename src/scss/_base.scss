@@ -4,10 +4,6 @@ body {
     background: $body-bg-color;
     color: $body-text-color;
     position: relative;
-
-    &.modal-open {
-        overflow: hidden;
-    }
 }
 
 .centered {
@@ -33,7 +29,6 @@ h4,
 h5,
 h6 {
     font-family: $header-font;
-    color: $header-color;
     margin: 0;
     padding: 0;
     line-height: 1.2em;
@@ -55,10 +50,10 @@ img {
 }
 .inner {
     width:94%;
-    margin:0 3%;
+    margin:0 auto;
     @include bp(s) {
         width:90%;
-        max-width:1320px;
+        max-width:1280px;
         margin:0 auto; 
     }
 }
@@ -91,18 +86,32 @@ img {
     }
 }
 .hide {
-    display:none;
+    max-height:0;
+    opacity:0;
+    overflow:hidden;
+    transition:opacity .25s ease-in;
+    &.show {
+        max-height:100%;
+        opacity:1;
+    }
 }
 .button {
     padding:.25em 1em;
     text-align:center;
-    display:inline-block;
-    background:darken($grayish,10%);
+    display:block;
+    background:lighten($dark-green,5%);
     color:$white;
     transition:all .1s ease-in;
     border-radius:2px;
-    &:hover {
-        background:lighten($turquoise,10%);
-        color:$grayish;
+    border:1px solid $yellow;
+    @include bp(s) {
+        border:none;
+        display:inline-block;
     }
+    &:hover {
+        background:lighten($dark-green,2%);
+        color:$yellow;
+    }
+    
+    
 }
