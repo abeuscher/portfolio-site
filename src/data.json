@@ -26,7 +26,7 @@
             },
             {
                 "text": "pdf",
-                "url": "/images/resume_alexbeuscher_20170129.pdf"
+                "url": "/resume_alexbeuscher.pdf"
             }
         ],
         "contact": [
@@ -46,7 +46,7 @@
     "overview": {
         "title": "overview",
         "intro_header": "Overview",
-        "intro": "I am a web developer working in the San Francisco Bay Area. I have spent most of the past twenty years as a lead or sole tech within marketing based enterprises. I enjoy bringing order to chaos. Much of my work has been client facing, interacting directly with stakeholders and other producers. Together we have successfully turned business needs and brand identities into successful websites, many of which are still in use. I am experienced at working in high stress, clutch situations; I have participated in global product launches, run multiple camera live video shoots, and been with several startups as they have scaled into large companies.",
+        "intro": "I am a web developer working in the San Francisco Bay Area. I have spent most of the past twenty years as a lead or sole tech within marketing departments. I enjoy bringing order to chaos. Much of my work has been client facing, interacting directly with stakeholders and other producers. Together we have successfully turned business needs and brand identities into successful websites, many of which are still in use. I am experienced at working in high stress, clutch situations; I have participated in global product launches, run multiple camera live video shoots, and been with several startups as they have scaled into large companies.",
         "skills_header": "Skills",
         "skills": [
             {
