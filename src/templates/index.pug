@@ -10,13 +10,12 @@ block content
           each skill in locals.overview.skills
             li
               .skill-box
-                p(class="weight-"+ skill.level)=skill.title
-  section.portfolio
+                p=skill.title
+  section.portfolio.padding-bottom
     .inner.flex
       each site,idx in locals.portfolio.sites
-        - var className = idx > 3 ? "hide more-less" : "";
         if site.thumbs
-          .site-block(class=className, data-info=JSON.stringify(site),data-index=idx)
+          .site-block(data-info=JSON.stringify(site),data-index=idx)
             .thumb(data-bg=locals.config.imgPath + site.thumbs[0])
             h3=site.title
           .mobile-info
@@ -27,18 +26,13 @@ block content
             p=site.tech
             h3 About the project...
             p=site.description
-    .inner.centered.padding-bottom
-      a.button.btn-more-less(href="#") more
   section.resume
-    .inner.flex.padding-top
-      .col-third
-      .col-two-third
-        h2 Work History
+    .inner.padding-top
+        h2.centered Work History
     .inner
       each job,idx in locals.resume.jobs
-        - var className = idx > 3 ? "hide more-less" : "";
-        .job-block.flex(class=className)
-          .col-third
+        .job-block.flex
+          .col-quarter
             .thumb-bucket
               if job.url
                 a(href="http://"+job.url)
@@ -50,8 +44,6 @@ block content
             each position in job.positions
               h5=position.title
               p.timespan=position.time_span
-          .col-two-third
+          .col-three-quarter
             .description
               p=job.description
-    .inner.centered.padding-bottom
-      a.button.btn-more-less(href="#") more

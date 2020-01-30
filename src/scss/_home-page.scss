@@ -4,6 +4,9 @@
   p {
     margin: 0;
   }
+  .col-two-third p {
+    font-size:16px;
+  }
   ul.skills {
     display: flex;
     flex-wrap: wrap;
@@ -31,6 +34,7 @@
           font-size: 0.8em;
           line-height: 1.5;
           overflow: hidden;
+          /*
           &:after {
             content: "\e9d7\e9d7\e9d7";
             display: block;
@@ -54,6 +58,7 @@
               content: "\e9d9\e9d9\e9d9";
             }
           }
+          */
         }
 
         .stars {
@@ -120,17 +125,22 @@
       }
     }
   }
+  .button {
+    margin-top:$gutter-width; 
+  }
   .site-block {
     flex-basis: 100%;
     position: relative;
     display: inline-block;
     margin-top: $gutter-width;
-
     cursor: pointer;
     * {
       transition: all 0.2s ease-in;
     }
     @include bp(s) {
+      flex-basis: 48.5%;
+    }
+    @include bp(m) {
       flex-basis: 23.5%;
     }
     &:hover {
@@ -162,13 +172,13 @@
     font-size: 1.1em;
   }
   .description {
-    padding-top: 3px;
+    padding-top: 10px;
   }
   cite {
     display: block;
     margin-bottom: $gutter-width/2;
   }
-  .col-third p {
+  .col-third p, .col-quarter p {
     font-size: 0.9em;
   }
   .thumb-bucket {
@@ -194,10 +204,10 @@
   }
   @include bp(s) {
     .col-third,
-    .col-two-third {
+    .col-two-third, .col-quarter, .col-three-quarter {
       padding-bottom: $gutter-width;
     }
-    .col-third {
+    .col-third, .col-quarter {
       text-align: right;
     }
     .thumb-bucket {

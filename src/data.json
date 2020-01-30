@@ -25,7 +25,7 @@
                 "url": "https://www.linkedin.com/in/alex-beuscher-8314157/"
             },
             {
-                "text": "pdf",
+                "text": "PDF",
                 "url": "/resume_alexbeuscher.pdf"
             }
         ],
@@ -46,7 +46,7 @@
     "overview": {
         "title": "overview",
         "intro_header": "Overview",
-        "intro": "I am a web developer working in the San Francisco Bay Area. I have spent most of the past twenty years as a lead or sole tech within marketing departments. I enjoy bringing order to chaos. Much of my work has been client facing, interacting directly with stakeholders and other producers. Together we have successfully turned business needs and brand identities into successful websites, many of which are still in use. I am experienced at working in high stress, clutch situations; I have participated in global product launches, run multiple camera live video shoots, and been with several startups as they have scaled into large companies.",
+        "intro": "I am a web developer working in the San Francisco Bay Area. I have spent most of the past twenty years as a lead or sole tech within marketing departments. I enjoy bringing order to chaos. Much of my work has been client facing, interacting directly with stakeholders and other producers. Together we have turned business needs and brand identities into successful websites and web applications. I am experienced at working in high stress, clutch situations; I have participated in global product launches, run multiple camera live video shoots, and been with several startups as they have scaled into large companies.",
         "skills_header": "Skills",
         "skills": [
             {
@@ -66,40 +66,12 @@
                 "level": 3
             },
             {
-                "title": "React",
-                "level": 1
-            },
-            {
-                "title": "Vue",
-                "level": 1
-            },
-            {
                 "title": "Gulp",
                 "level": 2
             },
             {
                 "title": "PHP",
                 "level": 2
-            },
-            {
-                "title": "SQL",
-                "level": 2
-            },
-            {
-                "title": "Angular",
-                "level": 1
-            },
-            {
-                "title": "Cockpit CMS",
-                "level": 3
-            },
-            {
-                "title": "Final Cut",
-                "level": 2
-            },
-            {
-                "title": "Adobe Design",
-                "level": 3
             },
             {
                 "title": "ZenDesk",
@@ -112,17 +84,33 @@
             {
                 "title": "Pug",
                 "level": 3
+            },      
+             {
+                "title": "Adobe Design",
+                "level": 3
             },
             {
                 "title": "Marketo",
                 "level": 3
+            },                 
+            {
+                "title": "SQL",
+                "level": 2
             },
             {
-                "title": "Unity",
-                "level": 1
+                "title": "Final Cut",
+                "level": 2
             },
             {
                 "title": "C#",
+                "level": 1
+            },
+            {
+                "title": "Vue",
+                "level": 1
+            },            
+            {
+                "title": "React",
                 "level": 1
             }
         ]
@@ -140,7 +128,7 @@
                 ],
                 "role": "Developer / Designer",
                 "tech": "Wordpress, Pug, Gulp",
-                "description": "I came into this site after it had been online for several years and reworked through several agencies. I rebuilt the site theme using modern practices, implemented version control, and removed all front end plugins. I was able to reduce page load time from an avergae of 14s per page to a more reasonable 2.5s per page. I was then able to help the content team double time spent on page and significantly increase organic search traffic. Through funnel optimization and UX improvment, total site conversions have doubled.",
+                "description": "I came into this site after it had been online for four years and reworked through several agencies. I rebuilt the theme using modern practices, implemented version control, and removed all front end plugins. I was able to reduce page load time from an avergae of 14s per page to a more reasonable 2.5s per page. I was then able to help the content team double time spent on page and significantly increase organic search traffic. Through funnel optimization and UX improvment, total site conversions have doubled.",
                 "url": "https://www.dynamicsignal.com",
                 "modal_thumb": "thm-ds.jpg"
             },
@@ -152,7 +140,7 @@
                 ],
                 "role": "Developer",
                 "tech": "Zendesk, Vue, Theming & Customization",
-                "description": "The Dynamic Signal Support site is built on the ZenDesk platform. This site uses a custom Zendesk theme to serve support pages for our site. This was a cross-departmental effort which I ran and coordinated.",
+                "description": "The Dynamic Signal Support site is built on the ZenDesk platform using a custom theme. This was a cross-departmental effort which I ran and coordinated. This work also included some light work with Vue, as that is what ZenDesk's front end is built with.",
                 "url": "https://support.dynamicsignal.com",
                 "modal_thumb": "thm-ds.jpg"
             },
@@ -164,7 +152,7 @@
                 ],
                 "role": "Developer",
                 "tech": "Expression Engine, Telemetry, Localization",
-                "description": "This was our first experimentation with connecting to in game stats to enrich the user experience at the site and provide some connectivity to the game. We used ajax calls to collect and store stats locally on our server, then built a dynamic infographic displaying community stats from these data.",
+                "description": "This was 2k's first experimentation with surfacing in game live stats to enrich the user experience at the site and provide some connectivity to the game. We used ajax calls to collect and store stats locally on our server, then built a dynamic infographic displaying community stats from these data.",
                 "url": "https://www.xcom.com",
                 "modal_thumb": "thm-xcom-modal.jpg"
             },
@@ -176,7 +164,7 @@
                 ],
                 "role": "Developer",
                 "tech": "Expression Engine, Localization, Oauth",
-                "description": "This site was our department's first effort in building a localized site. In its first iteration, we supporeted Spanish and English, using Expression Engine's built in localization features for support.",
+                "description": "This site was our department's first effort in building a localized site. In its original iteration, we supported Spanish and English, using Expression Engine's built in localization features for support.",
                 "url": "https://wwe.2k.com/",
                 "modal_thumb": "thm-wwe-modal.jpg"
             },
@@ -198,7 +186,7 @@
                 ],
                 "role": "Developer",
                 "tech": "Expression Engine, Localization, Social Media API",
-                "description": "Borderlands is a large, well known franchise. The challenge here was in creating a visual spectacle with the site to showcase the franchise's unique look and feel. Also, with a large amount of DLC, the relationships between various products and package deals was a taxonomical challenge. With a localized site, content spaces with so much imagery had to be carefully designed to be flexible to fit differently sized strings. Additionally, the site features social media API interaction and a Skill Tree calculator web application.",
+                "description": "Borderlands is a large, well known franchise. The challenge here was in creating a visual spectacle with the site to showcase the franchise's unique look and feel. Also, with a large amount of DLC, the relationships between various products and package deals was a taxonomical challenge. With a localized site, content spaces with so much imagery had to be carefully designed to be flexible to fit differently sized strings. Additionally, the site featured social media API interaction and a Skill Tree calculator web application.",
                 "url": "https://www.borderlandsthegame.com/",
                 "modal_thumb": "thm-borderlands-modal.jpg"
             },
@@ -232,7 +220,7 @@
         "jobs": [
             {
                 "name": "Dynamic Signal",
-                "description": "Dynamic Signal is a B2B Saas company. I have been in charge of their public facing web properties for the past several years. This includes a public Wordpress Site, a support site at Zendesk, a Marketo Installation, and a Content Hub at Uberflip among others. Along with developmet and maintenance, my work also involved analytics, strategy, content creation (written and video), and some small amount of involvement with the core product, an employee communcation platform.",
+                "description": "Dynamic Signal is a B2B Saas company. I have been in charge of their public facing web properties for the past several years. This includes a public Wordpress Site, a support site at Zendesk, a Marketo Installation, and a Content Hub at Uberflip among others. Along with development and maintenance, my work also involved analytics, strategy, and content creation.",
                 "location": "San Bruno, CA",
                 "url": "dynamicsignal.com",
                 "thumb": "thm-ds.jpg",
@@ -251,7 +239,7 @@
             },
             {
                 "name": "2K Games",
-                "description": "2K Games is a video game publisher of titles such as Borderlands, Civilization, and NBA 2K. I was the first full time web developer in 2K's marketing department. Previous to my arrival, sites were built through managed agencies. After implementing basic processes, source control, and tightening security, I was promoted and my team got a second developer. Together, we planned and built a central CMS, set it up as a REST API, and built a continuous deploy process using Amazon's AWS services. We were then able to consolidate our content editing and localization efforts and the content machine became much more robust. The system we built is still in use today and has expanded to support many other features in the 2K ecosystem.",
+                "description": "2K Games is a video game publisher of titles such as Borderlands, Civilization, and NBA 2K. I was the first full time web developer in 2K's marketing department. Previous to my arrival, sites were built through managed agencies. After implementing basic processes, source control, and tightening security, I was promoted and my team got a second developer. Together, we modified a centralized CMS, set it up as a REST API, and built a continuous deploy process using Amazon's AWS services. We were then able to consolidate our content editing and localization efforts and the content machine became much more robust. The system we built is still in use today and has expanded to support many other features in the 2K ecosystem.",
                 "location": "Novato, CA",
                 "url": "2k.com",
                 "thumb": "thm-2k.jpg",
@@ -284,7 +272,7 @@
             },
             {
                 "name": "WAAF and Mike FM (Entercom)",
-                "description": "WAAF and Mike FM are/were two Boston music radio stations owned by Entercom. WAAF remains a top rated station, while Mike FM has since gone off-air. I managed a team of content producers, and also worked in a variety of roles to support and create video, web, and mobile content for our listeners in conjunction with our station's on-air personalities as well as local and national celebrities. On the development side, I built several novelty apps which we hosted at the station sites, and provided ongoing support and development for online contesting, event specific microsites, and ad placement on the site. I alspo coached staff and online personalities on blog writing and engaging with the audience over social media.",
+                "description": "WAAF and Mike FM are/were two Boston music radio stations owned by Entercom. WAAF remains a top rated station, while Mike FM has since gone off-air. I managed a team of content producers, and also worked in a variety of roles to support and create video, web, and mobile content for our listeners in conjunction with our station's on-air personalities as well as local and national celebrities. On the development side, I built several novelty apps which we hosted at the station sites, and provided ongoing support and development for online contesting, event specific microsites, and ad placement on the site. I also coached staff and online personalities on blog writing and engaging with their audience over social media.",
                 "location": "Brighton, MA",
                 "url": "waaf.com",
                 "thumb": "thm-waaf.jpg",
@@ -298,7 +286,7 @@
             },
             {
                 "name": "Boston Interactive",
-                "description": "Boston Interactive is a leading design firm. My duties as a developer there ranged from markup and CSS layout to some php programming projects and a good deal of javascript work. Among the clients serviced were FAO Schwartz, New England Coffee, MedAssets, and many others.",
+                "description": "Boston Interactive is a leading design firm. My duties as a developer there ranged from markup and CSS layout to some php programming projects and a good deal of javascript work. Among the clients serviced were FAO Schwartz, New England Coffee, MedAssets, and others.",
                 "location": "Charlestown, MA",
                 "url": "bostoninteractive.com",
                 "thumb": "thm-bi.jpg",
@@ -340,7 +328,7 @@
             },
             {
                 "name": "Freelance Web Design",
-                "description": "I work on and off as a freelance developer and designer. Along with my web work, I do consulting in basic IT, application training, and print design. Clients have included film, healthcare, environmetal, and other concerns. I continue to support a small number of clients.",
+                "description": "I work on and off as a freelance developer and designer. Along with my web work, I do consulting in basic IT, application training, and print design. Clients have included film, healthcare, environmental, and other concerns. I continue to support a small number of clients.",
                 "location": "Allston, MA / Alameda, CA",
                 "url": "alexbeuscher.com",
                 "thumb": "thm-self.jpg",
@@ -354,7 +342,7 @@
             },
             {
                 "name": "SSDS",
-                "description": "Solomon Schechter Day School is a private elementary school. Taught video and web design to children ages 9 to 12 at After School Program. For video, students learned to work with a camera, plan movies, and make short films. In web we learned to make a basic site using a text editor and graphics tools.",
+                "description": "Solomon Schechter Day School is a private elementary school. I taught video and web design to children ages 9 to 12 at their After School Program. For video, students learned to work with a camera, plan movies, and make short films. In web we learned to make a basic site using a text editor and graphics tools.",
                 "location": "",
                 "url": "ssdsboston.org",
                 "thumb": "thm-ssds.jpg",
@@ -368,7 +356,7 @@
             },
             {
                 "name": "AMICAS, Inc.",
-                "description": "AMICAS provided software for the management and viewing of medical images (x-rays) inside of a web browser on standard PC's. My responsibilities included redesign and implementation of public website as well as the design of an Intranet Site.",
+                "description": "AMICAS provided software for the management and viewing of medical images (x-rays) inside of a web browser on standard PC's. My responsibilities included redesign and implementation of public website as well as the design of an Intranet Site and Customer Support Center.",
                 "location": "Brighton, MA / Chicago, IL",
                 "url": "",
                 "thumb": "thm-amicas.jpg",

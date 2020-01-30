@@ -13,7 +13,12 @@ body {
 .right {
   text-align: right;
 }
-
+.hide-mobile {
+  display:none;
+  @include bp(s) {
+    display:default;
+  }
+}
 a {
   text-decoration: none;
   color: $body-link-color;
@@ -51,7 +56,7 @@ img {
 .inner {
   width: 90%;
   margin: 0 auto;
-  max-width: 1280px;
+  max-width: 1025px;
 }
 .padding-both {
   padding-top: $gutter-width;
@@ -79,17 +84,20 @@ img {
       flex-basis: 65%;
     }
   }
-}
-.hide {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: opacity 0.25s ease-in;
-  &.show {
-    max-height: 100%;
-    opacity: 1;
+  .col-quarter {
+    flex-basis: 100%;
+    @include bp(s) {
+      flex-basis: 24%;
+    }
+  }
+  .col-three-quarter {
+    flex-basis: 100%;
+    @include bp(s) {
+      flex-basis: 74%;
+    }
   }
 }
+
 .button {
   padding: 0.25em 1em;
   text-align: center;

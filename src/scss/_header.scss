@@ -53,7 +53,7 @@ header {
   h1,
   h2 {
     color:$header-text-color;
-    
+    text-shadow:2px 2px 5px rgba(0,0,0,.4);
   }
   h1 {
     font-family: $logo-font;
