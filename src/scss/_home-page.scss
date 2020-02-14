@@ -166,17 +166,23 @@
   position: relative;
   h4 {
     margin-top: $gutter-width/4;
-    font-size: 1.4em;
+    font-size: 20px;
+    line-height:1.6;
   }
   h5 {
-    font-size: 1.1em;
+    font-size: 16px;
+    line-height:2;
   }
-  .description {
-    padding-top: 10px;
+  .description p {
+    padding-top: $gutter-width/4;
+  }
+  p.timespan {
+    margin-bottom:10px;
+    line-height:.8;
   }
   cite {
     display: block;
-    margin-bottom: $gutter-width/2;
+    margin-bottom: 16px;
   }
   .col-third p, .col-quarter p {
     font-size: 0.9em;

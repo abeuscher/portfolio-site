@@ -33,12 +33,6 @@ block content
       each job,idx in locals.resume.jobs
         .job-block.flex
           .col-quarter
-            .thumb-bucket
-              if job.url
-                a(href="http://"+job.url)
-                  .thumb(data-bg=locals.config.imgPath+job.thumb)
-              else
-                .thumb(data-bg=locals.config.imgPath+job.thumb)
             h4=job.name
             cite=job.location
             each position in job.positions
