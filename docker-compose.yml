@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  webserver:
+    build: 
+      context: ./bin/webserver
+    container_name: 'portfolioserver'
+    restart: 'always'
+    hostname: alexbeuscher.local
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes: 
+      - ./public_html:/usr/local/apache2/htdocs/
