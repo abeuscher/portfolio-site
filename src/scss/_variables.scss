@@ -32,7 +32,7 @@ $header-font-size:1.4em;
 $gutter-width:50px;
 
 // Section BAckground Colors
-$header-bg:radial-gradient(circle at 25% 50%, $light-green 0%, darken($sea-green,10%) 100%);
+$header-bg:linear-gradient(to right, #ebedf0 0%, darken($sea-green,10%) 100%);
 $header-mobile-bg:$sea-green;
 $header-text-color:$white;
 $nav-bg:$dark-green;

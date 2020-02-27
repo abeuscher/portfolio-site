@@ -47,11 +47,20 @@ header {
   color:$header-text-color;
   padding: $gutter-width 0 $gutter-width/3;
   text-align: center;
+  position:relative;
   @include bp(s) {
     background:$header-bg;
   }
+  #bg-svg {
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    width:100%;
+  }
   h1,
   h2 {
+    position:relative;
     color:$header-text-color;
     text-shadow:2px 2px 5px rgba(0,0,0,.4);
   }

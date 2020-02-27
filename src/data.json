@@ -112,6 +112,18 @@
             {
                 "title": "React",
                 "level": 1
+            },            
+            {
+                "title": "Node.js",
+                "level": 1
+            },            
+            {
+                "title": "Mongo DB",
+                "level": 1
+            },            
+            {
+                "title": "Express",
+                "level": 1
             }
         ]
     },
