@@ -30,14 +30,6 @@ html(lang="en")
     #hidden-thumb
       img(src=locals.config.imgPath+locals.meta.site_thumb,alt="")
     header
-      svg#bg-svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='100%', height='100%')
-        defs()
-          // This is the pattern definition
-          pattern.balls#pattern(width='18', height='18', viewBox='0 0 18 18', patternUnits='userSpaceOnUse')
-            rect(width='16', height='16', x='1', y='1', stroke="white", stroke-width="2", fill="transparent",stroke-opacity="10")
-        // This is the background box
-        rect#box(fill='url(#pattern)', height='100%', width='100%', y='0', x='0')
-
       h1!=locals.header.name
       h2=locals.header.site_title
     #top-nav
